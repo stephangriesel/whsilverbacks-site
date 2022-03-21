@@ -52,6 +52,7 @@ function App() {
   //return statement and JSX template
   return (
     <div className="App">
+      {/* TODO!! Helmet throws error, fix: https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html */}
       <Helmet>
         <meta charSet="utf-8" />
         <title>SandySoil Property Management</title>
