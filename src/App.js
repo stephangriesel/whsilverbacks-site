@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const query = `
 {
@@ -14,7 +15,7 @@ const query = `
 }
 `
 // Environment variables
-const {REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN} = process.env;
+const { REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN } = process.env;
 
 function App() {
   // define the initial state
@@ -22,7 +23,7 @@ function App() {
 
   useEffect(() => {
     window
-    // Change to template string & use template literals to define environment variable
+      // Change to template string & use template literals to define environment variable
       .fetch(`https://graphql.contentful.com/content/v1/spaces/${REACT_APP_SPACE_ID}`, {
         method: "POST",
         headers: {
@@ -51,6 +52,11 @@ function App() {
   //return statement and JSX template
   return (
     <div className="App">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>SandySoil Property Management</title>
+        <link rel="canonical" href="http:/www.sandysoil.co.za" />
+      </Helmet>
       <header className="App-header">
         <img src={page.logo.url} className="App-logo" alt="logo" />
         <p>
