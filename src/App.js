@@ -56,6 +56,11 @@ function App() {
         <meta charSet="utf-8" />
         <title>SandySoil Property Management</title>
         <link rel="canonical" href="http:/www.sandysoil.co.za" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
       </Helmet>
       <header className="App-header">
         <img src={page.logo.url} className="App-logo" alt="logo" />
