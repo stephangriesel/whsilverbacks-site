@@ -1,6 +1,8 @@
 import './App.css';
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import Button from '@mui/material/Button';
+import FreshButton from './UI/Button/Button'
 
 const query = `
 {
@@ -68,14 +70,28 @@ function App() {
         <p>
           {page.title}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* Material UI Button */}
+        <Button variant="contained">
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </Button>
+        {/* CSS Modules Button */}
+        <FreshButton variant="contained">
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </FreshButton>
       </header>
     </div>
   );
