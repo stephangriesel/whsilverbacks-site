@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     window
     // Change to template string & use template literals to define environment variable
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/${REACT_APP_SPACE_ID}/`, {
+      .fetch(`https://graphql.contentful.com/content/v1/spaces/${REACT_APP_SPACE_ID}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
