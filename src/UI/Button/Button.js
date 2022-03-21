@@ -1,22 +1,18 @@
 import React from 'react';
 import styles from './Button.module.css';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Button = (props) => {
+  const children = props.children;
   return (
     <button type={props.type} className={styles.button}>
-      {props.children}
+      {children}
     </button>
   )
 }
 
-Button.defaultProps = {
-// TODO: PropTypes
-//   buttonText: 'Learn React'
-// }
-
-// Button.propTypes = {
-//   buttonText: PropTypes.string
-}
+Button.propTypes = {
+  children: PropTypes.element.isRequired
+};
 
 export default Button
