@@ -82,7 +82,7 @@ function App() {
           </a>
         </Button>
         {/* CSS Modules Button */}
-        <FreshButton variant="contained">
+        <FreshButton type="button">
           <a
             className="App-link"
             href="https://reactjs.org"
