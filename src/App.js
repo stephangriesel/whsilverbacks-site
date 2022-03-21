@@ -13,6 +13,8 @@ const query = `
   }
 }
 `
+// Environment variables
+const {REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN} = process.env;
 
 function App() {
   // define the initial state
@@ -20,12 +22,13 @@ function App() {
 
   useEffect(() => {
     window
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/SPACEIDGOESHERE/`, {
+    // Change to template string & use template literals to define environment variable
+      .fetch(`https://graphql.contentful.com/content/v1/spaces/${REACT_APP_SPACE_ID}/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           // Authenticate the request
-          Authorization: "Bearer TOKENGOESHERE",
+          Authorization: `Bearer ${REACT_APP_CDA_TOKEN}`,
         },
         // send the GraphQL query
         body: JSON.stringify({ query }),
