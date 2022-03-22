@@ -12,6 +12,22 @@ module.exports = {
     path:path.resolve(__dirname, "dist"),
   },
 
+  // https://webpack.js.org/configuration/module/#rule
+  module: {
+    rules: [
+      {
+        test: /\.?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
+      },
+    ]
+  },
+
   plugins: [
     // https://webpack.js.org/plugins/html-webpack-plugin/  
     new HtmlWebpackPlugin({
