@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // https://webpack.js.org/configuration/entry-context/#entry
-  entry: path.join(__dirname, "src", "index.js"),
+  // entry: path.join(__dirname, "src", "index.js"),
   // what is __dirname https://www.digitalocean.com/community/tutorials/nodejs-how-to-use__dirname 
   // https://www.w3schools.com/nodejs/met_path_join.asp
 
@@ -13,10 +13,10 @@ module.exports = {
     filename: 'index.bundle.js',
   },
   // dev server config
-  devServer: {
-    port:3010,
-    watchContentBase: true,
-  },
+  // devServer: {
+  //   port:3010,
+  //   watchContentBase: true,
+  // },
   // https://webpack.js.org/configuration/module/#rule
   // 1. test with js or jsx extensions
   // 2. exclude node_modules folder
@@ -34,7 +34,8 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
+        exclude: ['/UI/Button/Button.module.css'],
         use: [
           'style-loader',
           'css-loader',
