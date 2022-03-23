@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Button from '@mui/material/Button';
 import FreshButton from './UI/Button/Button'
+import TestButton from './components/TestButton'
 
 const query = `
 {
@@ -81,6 +82,8 @@ function App() {
             Learn React
           </a>
         </Button>
+        {/* Jest Test */}
+        <TestButton />
         {/* CSS Modules Button */}
         <FreshButton type="button">
           <a
