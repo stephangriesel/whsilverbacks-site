@@ -7,16 +7,24 @@ module.exports = {
   // what is __dirname https://www.digitalocean.com/community/tutorials/nodejs-how-to-use__dirname 
   // https://www.w3schools.com/nodejs/met_path_join.asp
 
-  // https://webpack.js.org/concepts/output/
+  // Where will send the files.. more https://webpack.js.org/concepts/output/
   output: {
     path:path.resolve(__dirname, "dist"),
+    filename: 'index.bundle.js',
   },
-
+  // dev server config
+  devServer: {
+    port:3010,
+    watchContentBase: true,
+  },
   // https://webpack.js.org/configuration/module/#rule
+  // 1. test with js or jsx extensions
+  // 2. exclude node_modules folder
+  // 3. handle both js and sass files
   module: {
     rules: [
       {
-        test: /\.?js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -25,6 +33,14 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ],
+      }
     ]
   },
 
