@@ -1,3 +1,4 @@
+name: Codecov Test
 steps:
 - uses: actions/checkout@master
 - uses: codecov/codecov-action@v2
