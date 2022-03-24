@@ -1,10 +1,10 @@
-name: Running Code Coverage
+name: Codecov Test
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
-  build:
-
+  Codecov-Test:
+    name: Codecov Test Job
     runs-on: ubuntu-latest
 
     strategy:
@@ -12,10 +12,16 @@ jobs:
         node-version: [16.x]
 
     steps:
-    - name: Checkout repository
+    - uses: actions/checkout@master
       uses: actions/checkout@v2
       with:
-        fetch-depth: 2
+        token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+        files: ./clover.xml # optional
+        flags: unittests # optional
+        name: codecov-umbrella # optional
+        # fail_ci_if_error: true # optional (default = false)
+        directory: ./coverage #optional
+        verbose: true # optional (default = false)
 
     - name: Set up Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
