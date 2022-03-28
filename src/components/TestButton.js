@@ -2,12 +2,6 @@ import React from 'react'
 import FreshButton from '../UI/Button/Button'
 
 const TestButton = () => {
-  function sum(num1, num2) {
-    return num1 + num2;
-  }
-
-  console.log("get sum:", sum);
-
   return (
     <FreshButton variant="contained">
     <a
