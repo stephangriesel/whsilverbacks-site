@@ -30,6 +30,9 @@ jobs:
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
+      with: 
+        # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+        files: clover.xml
       # if private repo used specify token
       # with:
       #   token: ${{ secrets.CODECOV_TOKEN }}
