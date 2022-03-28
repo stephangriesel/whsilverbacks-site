@@ -1,9 +1,10 @@
 import './App.css';
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
 import Button from '@mui/material/Button';
 import FreshButton from './UI/Button/Button'
 import TestButton from './components/TestButton'
+import SEO from './components/Seo'
+import Greeting from './components/Greeting'
 
 const query = `
 {
@@ -56,21 +57,22 @@ function App() {
   return (
     <div className="App">
       {/* TODO!! Helmet throws error, fix: https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html */}
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>SandySoil Property Management</title>
-        <link rel="canonical" href="http:/www.sandysoil.co.za" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
-      </Helmet>
+      <SEO />
       <header className="App-header">
         <img src={page.logo.url} className="App-logo" alt="logo" />
         <p>
           {page.title}
         </p>
+        <div>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </div>
         {/* Material UI Button */}
         <Button variant="contained">
           <a
