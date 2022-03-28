@@ -30,3 +30,20 @@ jobs:
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
+
+    steps:
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v2
+      with:
+    # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+      files: ./clover.xml # optional
+      flags: unittests # optional
+      name: codecov-umbrella # optional
+      fail_ci_if_error: true # optional (default = false)
+      verbose: true # optional (default = false)
+
+    # If token is being used for private repos
+    # - name: Upload coverage to Codecov
+    #   uses: codecov/codecov-action@v1
+    #   with:
+    #     token: ${{ secrets.YOUR_SECRET_TOKEN }}
