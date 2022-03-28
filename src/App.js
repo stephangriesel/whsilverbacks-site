@@ -97,6 +97,7 @@ function App() {
             Learn React
           </a>
         </FreshButton>
+        <Greeting />
       </header>
     </div>
   );
