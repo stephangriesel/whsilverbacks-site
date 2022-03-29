@@ -64,7 +64,7 @@ function App() {
         <p>
           {page.title}
         </p>
-        <div>
+        <div id="container">
           <a
             className="App-link"
             href="https://reactjs.org"
