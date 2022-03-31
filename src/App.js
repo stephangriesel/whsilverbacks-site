@@ -6,6 +6,7 @@ import TestButton from './components/TestButton'
 import SEO from './components/Seo'
 import Greeting from './components/Greeting'
 import Async from './components/Async';
+import About from './components/About'
 
 const query = `
 {
@@ -100,6 +101,7 @@ function App() {
         </FreshButton>
         <Greeting />
         <Async />
+        <About />
       </header>
     </div>
   );
