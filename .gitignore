@@ -13,6 +13,9 @@
 # production
 /build
 
+# examples
+/src/components/examples/*
+
 # misc
 .env
 .DS_Store
