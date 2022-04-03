@@ -1,9 +1,9 @@
 import React from 'react'
-import FreshButton from '../UI/Button/Button'
+import Button from '../../UI/Button/Button'
 
 const TestButton = () => {
   return (
-    <FreshButton variant="contained">
+    <Button variant="contained">
     <a
       className="App-link"
       href="https://reactjs.org"
@@ -12,7 +12,7 @@ const TestButton = () => {
     >
       Learn React
     </a>
-  </FreshButton>
+  </Button>
   )
 }
 
