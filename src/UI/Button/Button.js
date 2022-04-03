@@ -11,8 +11,4 @@ const Button = (props) => {
   )
 }
 
-Button.propTypes = {
-  children: PropTypes.element.isRequired
-};
-
 export default Button
