@@ -1,5 +1,4 @@
 import './App.css';
-import FreshButton from './UI/Button/Button'
 import SEO from './components/Seo';
 import Header from './components/Header';
 import Footer from './components/Footer';

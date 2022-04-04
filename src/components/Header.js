@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react"
+import Layout from '../UI/Layout/Layout'
 
 const query = `
 {
@@ -50,12 +51,14 @@ const Header = () => {
   }
   // return statement & jsx template
   return (
-    <header className="App-header">
-      <img src={page.logo.url} className="App-logo" alt="logo" />
-      <p>
-        {page.title}
-      </p>
-    </header>
+    <Layout>
+      <header className="App-header">
+        <img src={page.logo.url} className="App-logo" alt="logo" />
+        <p>
+          {page.title}
+        </p>
+      </header>
+    </Layout>
   )
 }
 
