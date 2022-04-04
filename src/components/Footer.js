@@ -1,8 +1,9 @@
 import React from 'react'
+import Layout from '../UI/Layout/Layout'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <Layout>Footer</Layout>
   )
 }
 
