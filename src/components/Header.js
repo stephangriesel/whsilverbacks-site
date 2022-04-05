@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react"
 import Layout from '../UI/Layout/Layout'
+import Navbar from './Navbar'
 
 const query = `
 {
@@ -52,6 +53,7 @@ const Header = () => {
   // return statement & jsx template
   return (
     <Layout>
+      <Navbar />
       <header className="App-header">
         <img src={page.logo.url} className="App-logo" alt="logo" />
         <p>
