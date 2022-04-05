@@ -3,7 +3,11 @@ import Layout from '../UI/Layout/Layout'
 
 const Footer = () => {
   return (
-    <Layout>Footer</Layout>
+    <Layout>
+      <ul>
+        <li>Copyright</li>
+      </ul>
+    </Layout>
   )
 }
 
