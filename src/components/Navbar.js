@@ -11,8 +11,8 @@ import '@szhsin/react-menu/dist/transitions/slide.css';
 const Navbar = () => {
   return (
     <>
-      <Menu menuButton={<MenuButton>Open menu</MenuButton>}>
-        <MenuItem>New File</MenuItem>
+      <Menu menuButton={<MenuButton>Home</MenuButton>}>
+        <MenuItem>home</MenuItem>
         <SubMenu label="Open">
           <MenuItem>index.html</MenuItem>
           <MenuItem>example.js</MenuItem>
