@@ -1,29 +1,29 @@
-import React from 'react'
+import React, {useRef, useState} from 'react'
 import {
-  Menu,
+  ControlledMenu,
   MenuItem,
-  MenuButton,
-  SubMenu
 } from '@szhsin/react-menu';
 import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
 
 const Navbar = () => {
+  const ref = useRef(null);
+  const [isOpen, setOpen] = useState();
   return (
     <>
-      <Menu menuButton={<MenuButton>Home</MenuButton>}>
-        <MenuItem>home</MenuItem>
-        <SubMenu label="Open">
-          <MenuItem>index.html</MenuItem>
-          <MenuItem>example.js</MenuItem>
-          <SubMenu label="Styles">
-            <MenuItem>about.css</MenuItem>
-            <MenuItem>home.css</MenuItem>
-            <MenuItem>index.css</MenuItem>
-          </SubMenu>
-        </SubMenu>
+      <div ref={ref} className="btn" onMouseEnter={() => setOpen(true)}>
+        Hover to Open
+      </div>
+      <ControlledMenu
+        state={isOpen ? 'open' : 'closed'}
+        anchorRef={ref}
+        onMouseLeave={() => setOpen(false)}
+        onClose={() => setOpen(false)}
+      >
+        <MenuItem>New File</MenuItem>
         <MenuItem>Save</MenuItem>
-      </Menu>
+        <MenuItem>Close Window</MenuItem>
+      </ControlledMenu>
     </>
   )
 }
