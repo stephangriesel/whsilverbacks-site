@@ -20,9 +20,9 @@ const Navbar = () => {
         onMouseLeave={() => setOpen(false)}
         onClose={() => setOpen(false)}
       >
-        <MenuItem>New File</MenuItem>
-        <MenuItem>Save</MenuItem>
-        <MenuItem>Close Window</MenuItem>
+        <MenuItem>Home</MenuItem>
+        <MenuItem>Projects</MenuItem>
+        <MenuItem>Contact</MenuItem>
       </ControlledMenu>
     </>
   )
