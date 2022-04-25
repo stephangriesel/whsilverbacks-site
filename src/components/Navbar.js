@@ -6,6 +6,9 @@ import {
 import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
 
+// Navbar Styles
+// import Nav from '../UI/Nav/Nav'
+
 const Navbar = () => {
   const ref = useRef(null);
   const [isOpen, setOpen] = useState();
