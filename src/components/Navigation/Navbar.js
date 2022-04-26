@@ -7,13 +7,13 @@ import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
 
 // Navbar Styles
-// import Nav from '../UI/Nav/Nav'
+import Nav from '../../UI/Nav/Nav'
 
 const Navbar = () => {
   const ref = useRef(null);
   const [isOpen, setOpen] = useState();
   return (
-    <>
+    <Nav>
       <div ref={ref} className="btn" onMouseEnter={() => setOpen(true)}>
         Hover to Open
       </div>
@@ -27,7 +27,7 @@ const Navbar = () => {
         <MenuItem>Projects</MenuItem>
         <MenuItem>Contact</MenuItem>
       </ControlledMenu>
-    </>
+    </Nav>
   )
 }
 

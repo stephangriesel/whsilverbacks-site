@@ -5,9 +5,9 @@ import styles from './Nav.module.css';
 const Nav = (props) => {
   const children = props.children;
   return (
-    <Nav type={props.type} className={styles.nav}>
+    <nav type={props.type} className={styles.nav}>
       {children}
-    </Nav>
+    </nav>
   )
 }
 

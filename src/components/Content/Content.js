@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '../UI/Button/Button'
-import Layout from '../UI/Layout/Layout'
+import Button from '../../UI/Button/Button'
+import Layout from '../../UI/Layout/Layout'
 
 const Content = () => {
   return (
