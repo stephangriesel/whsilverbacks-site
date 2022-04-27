@@ -3,6 +3,9 @@ import { useRef, useState, useEffect } from "react"
 import Layout from '../../UI/Layout/Layout'
 import Navbar from '../Navigation/Navbar'
 
+// Import header styles 
+import Head from '../../UI/Head/Head'
+
 const query = `
 {
   pageCollection {
@@ -54,13 +57,13 @@ const Header = () => {
   return (
     <Layout>
       <header className="App-header">
-        <div className="brand">
+        <Head>
           <img src={page.logo.url} className="App-logo" alt="logo" />
           <h1>
             {page.title}
           </h1>
-        </div>
-        <Navbar />
+          <Navbar />
+        </Head>
       </header>
     </Layout>
   )
