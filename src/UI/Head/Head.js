@@ -4,9 +4,9 @@ import styles from './Head.module.css';
 const Head = (props) => {
   const children = props.children;
   return (
-    <div type={props.type} className={styles.head}>
-      {children}
-    </div>
+      <div type={props.type} className={styles.head}>
+        {children}
+      </div>
   )
 }
 

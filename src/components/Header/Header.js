@@ -58,10 +58,12 @@ const Header = () => {
     <Layout>
       <header className="App-header">
         <Head>
-          <img src={page.logo.url} className="App-logo" alt="logo" />
-          <h1>
-            {page.title}
-          </h1>
+          <div className="brand">
+            <img src={page.logo.url} className="App-logo" alt="logo" />
+            <h1>
+              {page.title}
+            </h1>
+          </div>
           <Navbar />
         </Head>
       </header>
