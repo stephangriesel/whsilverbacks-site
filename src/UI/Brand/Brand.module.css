@@ -6,4 +6,8 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.brand img {
+  width: 10em;
+}
 /*# sourceMappingURL=Brand.module.css.map */

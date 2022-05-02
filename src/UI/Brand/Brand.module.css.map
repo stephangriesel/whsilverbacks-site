@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,OAAO,EAAC,IAAI;EACZ,WAAW,EAAE,MAAM;CACpB",
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,OAAO,EAAC,IAAI;EACZ,WAAW,EAAE,MAAM;CAIpB;;AAND,AAGE,MAHI,CAGJ,GAAG,CAAC;EACF,KAAK,EAAC,IAAI;CACX",
     "sources": [
         "Brand.module.scss"
     ],
