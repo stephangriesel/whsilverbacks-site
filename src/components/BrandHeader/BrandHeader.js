@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react"
 // Navbar Styles
 import Brand from '../../UI/Brand/Brand'
 
+// TO DO: Query Update: Header
 const query = `
 {
   pageCollection {
