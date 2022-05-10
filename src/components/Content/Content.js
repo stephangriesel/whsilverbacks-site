@@ -2,16 +2,19 @@ import { useRef, useState, useEffect } from "react"
 import Button from '../../UI/Button/Button'
 import Layout from '../../UI/Layout/Layout'
 
-// TO DO: Query update
+// TO DO: Query update: Content
 const query = `
 {
-  pageCollection {
-    items {
-      title
-      logo {
+  contentCollection {
+  items {
+    title
+    description
+    imagesCollection {
+      items {
         url
       }
     }
+  }
   }
 }
 `
@@ -22,7 +25,7 @@ const { REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN } = process.env;
 const Content = () => {
 
   // define the initial state
-  const [page, setPage] = useState(null);
+  const [content, setContent] = useState(null);
 
   useEffect(() => {
     window
@@ -44,19 +47,19 @@ const Content = () => {
         }
 
         // rerender the entire component with new data
-        setPage(data.pageCollection.items[0]);
+        setContent(data.contentCollection.items[0]);
       });
   }, []);
 
   // show a loading screen case the data hasn't arrived yet
-  if (!page) {
+  if (!content) {
     return "Loading...";
   }
 
   return (
     <Layout>
       <div className='content-wrapper'>
-        {/* render content here */}
+        <h1>{content.title}</h1>
       </div>
     </Layout>
   )
