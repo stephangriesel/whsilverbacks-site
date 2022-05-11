@@ -26,6 +26,7 @@ const Content = () => {
 
   // define the initial state
   const [content, setContent] = useState(null);
+  console.log("check content state:",content);
 
   useEffect(() => {
     window
@@ -60,6 +61,9 @@ const Content = () => {
     <Layout>
       <div className='content-wrapper'>
         <h1>{content.title}</h1>
+        <p>{content.description}</p>
+        <img src={content.imagesCollection.items[0].url} alt="test" />
+        <img src={content.imagesCollection.items[1].url} alt="test" />
       </div>
     </Layout>
   )
