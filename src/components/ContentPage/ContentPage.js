@@ -1,11 +1,11 @@
 import { useRef, useState, useEffect } from "react"
-import Button from '../../UI/Button/Button'
+import Content from '../../UI/Content/Content'
 import Layout from '../../UI/Layout/Layout'
 
 // TO DO: Query update: Content
 const query = `
 {
-  contentCollection {
+  contentCollection {5
   items {
     title
     description
@@ -22,7 +22,7 @@ const query = `
 // Environment variables
 const { REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN } = process.env;
 
-const Content = () => {
+const ContentPage = () => {
 
   // define the initial state
   const [content, setContent] = useState(null);
@@ -59,14 +59,14 @@ const Content = () => {
 
   return (
     <Layout>
-      <div className='content-wrapper'>
+      <Content className="content">
         <h1>{content.title}</h1>
         <p>{content.description}</p>
         <img src={content.imagesCollection.items[0].url} alt="test" />
         <img src={content.imagesCollection.items[1].url} alt="test" />
-      </div>
+      </Content>
     </Layout>
   )
 }
 
-export default Content
+export default ContentPage
