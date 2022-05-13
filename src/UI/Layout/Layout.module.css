@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=Layout.module.css.map */
+.layoutWrapper h1 {
+  font-size: 2em;
+}
+
+.layoutWrapper p {
+  font-size: 1.2em;
+}
+/*# sourceMappingURL=Layout.module.css.map */
