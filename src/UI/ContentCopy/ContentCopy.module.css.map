@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,KAAK,EAAC,GAAG;CACV;;AAED,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EACtC,AAAA,YAAY,CAAC;IACX,OAAO,EAAE,IAAI;IACb,cAAc,EAAE,MAAM;GACvB",
+    "sources": [
+        "ContentCopy.module.scss"
+    ],
+    "names": [],
+    "file": "ContentCopy.module.css"
+}
