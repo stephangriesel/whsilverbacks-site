@@ -1,11 +1,12 @@
 import { useRef, useState, useEffect } from "react"
 import Content from '../../UI/Content/Content'
+import ContentCopy from '../../UI/ContentCopy/ContentCopy'
 import Layout from '../../UI/Layout/Layout'
 
 // TO DO: Query update: Content
 const query = `
 {
-  contentCollection {5
+  contentCollection {
   items {
     title
     description
@@ -26,7 +27,7 @@ const ContentPage = () => {
 
   // define the initial state
   const [content, setContent] = useState(null);
-  console.log("check content state:",content);
+  console.log("check content state:", content);
 
   useEffect(() => {
     window
@@ -59,11 +60,15 @@ const ContentPage = () => {
 
   return (
     <Layout>
-      <Content className="content">
-        <h1>{content.title}</h1>
-        <p>{content.description}</p>
-        <img src={content.imagesCollection.items[0].url} alt="test" />
-        <img src={content.imagesCollection.items[1].url} alt="test" />
+      <Content>
+        <ContentCopy>
+          <h1>{content.title}</h1>
+          <p>{content.description}</p>
+        </ContentCopy>
+        <div className="content-media">
+          <img src={content.imagesCollection.items[0].url} alt="test" />
+          {/* <img src={content.imagesCollection.items[1].url} alt="test" /> */}
+        </div>
       </Content>
     </Layout>
   )
