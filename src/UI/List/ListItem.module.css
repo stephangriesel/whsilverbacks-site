@@ -1,0 +1,9 @@
+.listItem, li {
+  list-style: none;
+  margin: 0 1em;
+}
+
+.listItem:last-child, li:last-child {
+  margin: 0;
+}
+/*# sourceMappingURL=ListItem.module.css.map */
