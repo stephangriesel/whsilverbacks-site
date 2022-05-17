@@ -4,13 +4,13 @@ import { FaRegMap } from 'react-icons/fa'
 import { FaEnvelope } from 'react-icons/fa'
 
 import Layout from '../../UI/Layout/Layout'
-import Flex from '../../UI/Layout/Flex/Flex'
+import FlexEvenly from '../../UI/Layout/FlexEvenly/FlexEvenly'
 
 const Footer = () => {
   return (
     <Layout>
       <div className='container'>
-                <Flex>
+                <FlexEvenly>
                     <div className='block'>
                         <h5 className='pt-4 flex-center-center'>ADDRESS</h5>
                         <div className='pt-4'>
@@ -75,7 +75,7 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
-                </Flex>
+                </FlexEvenly>
                 <div className="row">
                     <div className="col-10 mx-auto col-md-6 text-center text-capatalize pt-5">
                         <small>Sandy Soil {new Date().getFullYear().toString()}</small>

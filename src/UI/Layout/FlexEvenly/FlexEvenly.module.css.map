@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,OAAO,EAAC,IAAI;EACZ,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,YAAY;CAC9B;;AAED,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EACtC,AAAA,WAAW,CAAC;IACV,OAAO,EAAE,IAAI;IACb,cAAc,EAAE,MAAM;GACvB",
+    "sources": [
+        "FlexEvenly.module.scss"
+    ],
+    "names": [],
+    "file": "FlexEvenly.module.css"
+}
