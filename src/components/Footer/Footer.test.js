@@ -8,7 +8,6 @@ describe('Render footer', () => {
     // Act
 
     // Assert
-    const footerTextContains = screen.getByText('copyright', {exact: false});
     expect(footerTextContains).toBeInTheDocument();
   })
 })
