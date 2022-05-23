@@ -11,7 +11,9 @@ const Navbar = () => {
     <Nav>
       <Flex>
         <ListItem>Home</ListItem>
-        <ListItem>Projects</ListItem>
+        <ListItem>Event Construction</ListItem>
+        <ListItem>Stretch Tents</ListItem>
+        <ListItem>Temporary Structures</ListItem>
         <ListItem>Contact</ListItem>
       </Flex>
     </Nav>
