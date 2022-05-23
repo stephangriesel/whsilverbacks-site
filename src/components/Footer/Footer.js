@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className='block'>
                         <h5 className='pt-4 flex-center-center'>ADDRESS</h5>
                         <div className='pt-4'>
-                            <p><FaRegMap /> Pretorius Street 18 <br />Meyerton <br /> 1961 <br /> South Africa</p>
+                            <p><FaRegMap /> WH Group Ltd. Ltd co number 1390349<br />Stretch Tent, Temporary Structure & Event Construction Specialists based in Dorset</p>
                         </div>
                     </div>
                     <div className='block'>
@@ -22,8 +22,8 @@ const Footer = () => {
                         {/* <span><img className='flag' alt='flag' src={gb} /></span> */}
                         </h5>
                         <div className='pt-4'>
-                            <p><FaPhone /> Johan 0829205650</p>
-                            <p><FaEnvelope /><a className="link-dark" href="mailto:johan@sandysoil.co.za"> johan@sandysoil.co.za</a></p>
+                            {/* <p><FaPhone />#####</p> */}
+                            <p><FaEnvelope /><a className="link-dark" href="mailto:info@whsilverbacks.co.uk">  info@whsilverbacks.co.uk </a></p>
                         </div>
                     </div>
                     <div className='block'>
@@ -32,7 +32,7 @@ const Footer = () => {
                         </div>
                         <div className='socials pt-3'>
                             {/* Facebook */}
-                            <a href="https://www.facebook.com/sandysoil"><svg
+                            <a href="https://www.facebook.com/WHSilverbacks"><svg
                                 width="24"
                                 height="24"
                                 viewBox="0 0 24 24"
@@ -47,7 +47,7 @@ const Footer = () => {
                             </svg>
                             </a>
                             {/* Instagram */}
-                            <a href="https://www.instagram.com/sandysoil/"><svg
+                            <a href="https://www.instagram.com/whsilverbacks/"><svg
                                 width="24"
                                 height="24"
                                 viewBox="0 0 24 24"
@@ -78,7 +78,7 @@ const Footer = () => {
                 </FlexEvenly>
                 <div className="row">
                     <div className="col-10 mx-auto col-md-6 text-center text-capatalize pt-5">
-                        <small>Sandy Soil {new Date().getFullYear().toString()}</small>
+                        <small>WH Group Ltd. {new Date().getFullYear().toString()}</small>
                     </div>
                 </div>
             </div>
