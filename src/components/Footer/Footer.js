@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className='block'>
                         <h5 className='pt-4 flex-center-center'>ADDRESS</h5>
                         <div className='pt-4'>
-                            <p><FaRegMap /> WH Group Ltd. Ltd co number 1390349<br />Stretch Tent, Temporary Structure & Event Construction Specialists based in Dorset</p>
+                            <p><FaRegMap /> WH Group Ltd / 13903490</p>
                         </div>
                     </div>
                     <div className='block'>
