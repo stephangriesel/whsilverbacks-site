@@ -7,7 +7,7 @@ import Brand from '../../UI/Brand/Brand'
 // TO DO: Query Update: Header
 const query = `
 {
-  pageCollection {
+  headerCollection {
     items {
       title
       logo {
@@ -24,7 +24,7 @@ const { REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN } = process.env;
 const BrandHeader = () => {
 
     // define the initial state
-    const [page, setPage] = useState(null);
+    const [header, setHeader] = useState(null);
 
     useEffect(() => {
       window
@@ -46,20 +46,20 @@ const BrandHeader = () => {
           }
   
           // rerender the entire component with new data
-          setPage(data.pageCollection.items[0]);
+          setHeader(data.headerCollection.items[0]);
         });
     }, []);
   
     // show a loading screen case the data hasn't arrived yet
-    if (!page) {
+    if (!header) {
       return "Loading...";
     }
 
   return (
     <Brand>
-        <img src={page.logo.url} className="logo" alt="logo" />
+        <img src={header.logo.url} className="logo" alt="logo" />
         <h1>
-          {page.title}
+          {header.title}
         </h1>
     </Brand>
   )
