@@ -3,6 +3,21 @@ import Content from '../../UI/Content/Content'
 import ContentCopy from '../../UI/ContentCopy/ContentCopy'
 import Layout from '../../UI/Layout/Layout'
 
+// Swiper React components
+// import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Swiper required modules
+// import { EffectFade, Navigation, Pagination } from "swiper";
+
+// Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+// Image reveal
+import { Fade } from "react-awesome-reveal";
+
 // TO DO: Query update: Content
 const query = `
 {
@@ -65,10 +80,12 @@ const ContentPage = () => {
           <h1>{content.title}</h1>
           <p>{content.description}</p>
         </ContentCopy>
+        <Fade delay={1000}>
         <div className="content-media">
           <img src={content.imagesCollection.items[0].url} alt="test" />
           {/* <img src={content.imagesCollection.items[1].url} alt="test" /> */}
         </div>
+        </Fade>
       </Content>
     </Layout>
   )
