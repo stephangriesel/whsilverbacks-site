@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRef, useState, useEffect } from "react"
 import { FaPhone } from 'react-icons/fa'
 import { FaRegMap } from 'react-icons/fa'
 import { FaEnvelope } from 'react-icons/fa'
@@ -6,20 +7,69 @@ import { FaEnvelope } from 'react-icons/fa'
 import Layout from '../../UI/Layout/Layout'
 import FlexEvenly from '../../UI/Layout/FlexEvenly/FlexEvenly'
 
+const query = `
+{
+    footerCollection {
+      items {
+        leftTitle
+        leftParagraph
+        middleTitle
+        middleParagraph
+        rightTitle
+        rightParagraph    
+      }
+    }
+  }
+`
+
+// Environment variables
+const { REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN } = process.env;
+
 const Footer = () => {
-  return (
-    <Layout>
-      <div className='container'>
+    // define the initial state
+    const [footer, setFooter] = useState(null);
+
+    useEffect(() => {
+        window
+            // Change to template string & use template literals to define environment variable
+            .fetch(`https://graphql.contentful.com/content/v1/spaces/${REACT_APP_SPACE_ID}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    // Authenticate the request
+                    Authorization: `Bearer ${REACT_APP_CDA_TOKEN}`,
+                },
+                // send the GraphQL query
+                body: JSON.stringify({ query }),
+            })
+            .then((response) => response.json())
+            .then(({ data, errors }) => {
+                if (errors) {
+                    console.error(errors);
+                }
+
+                // rerender the entire component with new data
+                setFooter(data.footerCollection.items[0]);
+            });
+    }, []);
+
+    // show a loading screen case the data hasn't arrived yet
+    if (!footer) {
+        return "Loading...";
+    }
+    return (
+        <Layout>
+            <div className='container'>
                 <FlexEvenly>
                     <div className='block'>
-                        <h5 className='pt-4 flex-center-center'>ADDRESS</h5>
+                        <h5 className='pt-4 flex-center-center'>{footer.leftTitle}</h5>
                         <div className='pt-4'>
                             <p><FaRegMap /> WH Group Ltd / 13903490</p>
                         </div>
                     </div>
                     <div className='block'>
-                        <h5 className='pt-4 flex-center-center'>CONTACT 
-                        {/* <span><img className='flag' alt='flag' src={gb} /></span> */}
+                        <h5 className='pt-4 flex-center-center'>CONTACT
+                            {/* <span><img className='flag' alt='flag' src={gb} /></span> */}
                         </h5>
                         <div className='pt-4'>
                             {/* <p><FaPhone />#####</p> */}
@@ -82,8 +132,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-    </Layout>
-  )
+        </Layout>
+    )
 }
 
 export default Footer
