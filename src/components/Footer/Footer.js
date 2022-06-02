@@ -6,6 +6,9 @@ import { FaEnvelope } from 'react-icons/fa'
 
 import Layout from '../../UI/Layout/Layout'
 import FlexEvenly from '../../UI/Layout/FlexEvenly/FlexEvenly'
+import FlexTextRow from '../../UI/Layout/FlexTextRow/FlexTextRow'
+
+import ReactMarkdown from 'react-markdown'
 
 const query = `
 {
@@ -64,11 +67,13 @@ const Footer = () => {
                     <div className='block'>
                         <h5 className='pt-4 flex-center-center'>{footer.leftTitle}</h5>
                         <div className='pt-4'>
-                            <p><FaRegMap /> WH Group Ltd / 13903490</p>
+                                <ReactMarkdown>
+                                    {footer.leftParagraph}
+                                </ReactMarkdown>
                         </div>
                     </div>
                     <div className='block'>
-                        <h5 className='pt-4 flex-center-center'>CONTACT
+                        <h5 className='pt-4 flex-center-center'>{footer.middleTitle}
                             {/* <span><img className='flag' alt='flag' src={gb} /></span> */}
                         </h5>
                         <div className='pt-4'>
