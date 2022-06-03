@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,MAAM,EAAC,CAAC;EACR,OAAO,EAAC,CAAC;CACV",
     "sources": [
         "Instagram.module.scss"
     ],
