@@ -2,7 +2,15 @@
   font-size: 2em;
 }
 
+.layoutWrapper h3 {
+  font-weight: normal;
+}
+
 .layoutWrapper p {
   font-size: 1.2em;
+}
+
+.layoutWrapper svg {
+  margin: 0 0.5em;
 }
 /*# sourceMappingURL=Layout.module.css.map */
