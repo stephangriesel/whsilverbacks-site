@@ -6,7 +6,8 @@ import { FaEnvelope } from 'react-icons/fa'
 
 import Layout from '../../UI/Layout/Layout'
 import FlexEvenly from '../../UI/Layout/FlexEvenly/FlexEvenly'
-import FlexTextRow from '../../UI/Layout/FlexTextRow/FlexTextRow'
+import JustifyCenter from '../../UI/Layout/JustifyCenter/JustifyCenter'
+import FooterEnd from '../../UI/Layout/FooterEnd/FooterEnd'
 import Facebook from '../../UI/Social/Facebook/Facebook'
 import Instagram from '../../UI/Social/Instagram/Instagram'
 
@@ -107,11 +108,11 @@ const Footer = () => {
                         </FlexEvenly>
                     </div>
                 </FlexEvenly>
-                <div>
-                    <div>
+                <FooterEnd>
+                    <JustifyCenter>
                         <small>WH Group Ltd. {new Date().getFullYear().toString()}</small>
-                    </div>
-                </div>
+                    </JustifyCenter>
+                </FooterEnd>
             </div>
         </Layout>
     )
