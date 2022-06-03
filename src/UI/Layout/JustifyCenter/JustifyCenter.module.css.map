@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;CACxB",
+    "sources": [
+        "JustifyCenter.module.scss"
+    ],
+    "names": [],
+    "file": "JustifyCenter.module.css"
+}
