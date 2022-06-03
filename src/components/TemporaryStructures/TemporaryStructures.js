@@ -64,6 +64,9 @@ const TemporaryStructures = () => {
       <h1>
         {temporaryStructures.title}
       </h1>
+      <p>
+        {temporaryStructures.paragraph1}
+      </p>
       <img src={temporaryStructures.imagesCollection.items[0].url} alt="Events" />
     </div>
   )
