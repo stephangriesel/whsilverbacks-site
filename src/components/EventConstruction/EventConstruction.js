@@ -2,6 +2,8 @@ import React from 'react'
 
 import { useRef, useState, useEffect } from "react"
 
+import ReactMarkdown from 'react-markdown'
+
 const query = `
 {
   eventConstructionCollection {
@@ -16,6 +18,7 @@ const query = `
       paragraph1
       paragraph2
       paragraph3
+      paragraph4
     }
   }
 }
@@ -67,6 +70,31 @@ const EventConstruction = () => {
         {eventConstruction.title}
       </h1>
       <img src={eventConstruction.imagesCollection.items[0].url} alt="Events" />
+      <div>
+        <ReactMarkdown>
+          {eventConstruction.heading}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {eventConstruction.paragraph1}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {eventConstruction.paragraph2}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {eventConstruction.paragraph3}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {eventConstruction.paragraph4}
+        </ReactMarkdown>
+      </div>
     </div>
   )
 }
