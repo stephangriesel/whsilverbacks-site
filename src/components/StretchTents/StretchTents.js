@@ -2,6 +2,8 @@ import React from 'react'
 
 import { useRef, useState, useEffect } from "react"
 
+import ReactMarkdown from 'react-markdown'
+
 const query = `
 {
   stretchTentsCollection {
@@ -16,6 +18,12 @@ const query = `
       paragraph1
       paragraph2
       paragraph3
+      paragraph4
+      paragraph5
+      paragraph6
+      paragraph7
+      paragraph8
+      paragraph9
     }
   }
 }
@@ -64,6 +72,51 @@ const StretchTents = () => {
         {stretchTents.title}
       </h1>
       <img src={stretchTents.imagesCollection.items[0].url} alt="Events" />
+      <div>
+        <ReactMarkdown>
+          {stretchTents.paragraph1}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {stretchTents.paragraph2}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {stretchTents.paragraph3}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {stretchTents.paragraph4}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {stretchTents.paragraph5}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {stretchTents.paragraph6}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {stretchTents.paragraph7}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {stretchTents.paragraph8}
+        </ReactMarkdown>
+      </div>
+      <div>
+        <ReactMarkdown>
+          {stretchTents.paragraph9}
+        </ReactMarkdown>
+      </div>
     </div>
   )
 
