@@ -1,8 +1,8 @@
 import './App.css';
 import SEO from './components/SEO/Seo';
 import Header from './components/Header/Header';
+import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer';
-import ContentPage from './components/ContentPage/ContentPage';
 import About from './components/About/About'
 import Wrapper from './UI/Layout/Wrapper/Wrapper';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
@@ -21,7 +21,7 @@ function App() {
           <Header />
           <Switch>
             <Route exact path="/">
-              <ContentPage />
+              <Home />
             </Route>
             <Route exact path="/about">
               <About />
