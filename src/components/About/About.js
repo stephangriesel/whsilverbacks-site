@@ -77,6 +77,10 @@ const About = () => {
       <p>{about.paragraphFour}</p>
       <p>{about.paragraphFive}</p>
       <p>{about.paragraphSix}</p>
+      <p>{about.testimonialOne}</p>
+      <p>{about.testimonialTwo}</p>
+      <p>{about.testimonialThree}</p>
+
     </div>
   )
 }
