@@ -3,6 +3,8 @@ import { useRef, useState, useEffect } from "react"
 import ReactMarkdown from 'react-markdown'
 
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn'
+import Form from '../../UI/Form/Form'
+import FlexRow from '../../UI/Layout/FlexRow/FlexRow'
 
 // TO DO: Query Update: Header
 const query = `
@@ -55,23 +57,43 @@ const Contact = () => {
 
   return (
     <div>
-        <h1>{contact.title}</h1>
-        <h3>{contact.heading}</h3>
-        <form action="https://form.taxi/s/2dbsqdfa" method="POST">
-      <FlexColumn>
-          <input type="text" name="Name" />
-          <input type="number" name="Number" />
-          <input type="email" name="Email" />
-          <input type="date" name="EventDate" />
-          <input type="text" name="Location" />
-          <input type="number" name="NumberPeople" />
-          <input type="text" name="Reference" />
-          <button type="submit">Send</button>
-      </FlexColumn>
-        </form>
-        <ReactMarkdown>
-          {contact.slotParagraph}
-        </ReactMarkdown>
+      <FlexRow>
+        <div>
+          <h1>{contact.title}</h1>
+          <h3>{contact.heading}</h3>
+        </div>
+        <div>
+          <Form action="https://form.taxi/s/2dbsqdfa" method="POST">
+            <FlexColumn>
+              <label for="name">Name:</label>
+              <input type="text" name="Name" />
+
+              <label for="number">Number</label>
+              <input type="number" name="Number" />
+
+              <label for="email">E-Mail:</label>
+              <input type="email" name="Email" />
+
+              <label for="eventdate">Event Date:</label>
+              <input type="date" name="EventDate" />
+
+              <label for="location">Location:</label>
+              <input type="text" name="Location" />
+
+              <label for="NumberPeople">Number of people:</label>
+              <input type="number" name="NumberPeople" />
+
+              <label for="Reference">How did you find us?</label>
+              <input type="text" name="Reference" />
+
+              <button type="submit">Send</button>
+            </FlexColumn>
+          </Form>
+        </div>
+      </FlexRow>
+      <ReactMarkdown>
+        {contact.slotParagraph}
+      </ReactMarkdown>
     </div>
   )
 }
