@@ -58,38 +58,36 @@ const Contact = () => {
   return (
     <div>
       <FlexRow>
-        <div>
+        <FlexColumn>
           <h1>{contact.title}</h1>
           <h3>{contact.heading}</h3>
-        </div>
-        <div>
-          <Form action="https://form.taxi/s/2dbsqdfa" method="POST">
-            <FlexColumn>
-              <label for="name">Name:</label>
-              <input type="text" name="Name" />
+        </FlexColumn>
+        <Form action="https://form.taxi/s/2dbsqdfa" method="POST">
+          <FlexColumn>
+            <label for="name">Name:</label>
+            <input type="text" name="Name" />
 
-              <label for="number">Number</label>
-              <input type="number" name="Number" />
+            <label for="number">Number</label>
+            <input type="number" name="Number" />
 
-              <label for="email">E-Mail:</label>
-              <input type="email" name="Email" />
+            <label for="email">E-Mail:</label>
+            <input type="email" name="Email" />
 
-              <label for="eventdate">Event Date:</label>
-              <input type="date" name="EventDate" />
+            <label for="eventdate">Event Date:</label>
+            <input type="date" name="EventDate" />
 
-              <label for="location">Location:</label>
-              <input type="text" name="Location" />
+            <label for="location">Location:</label>
+            <input type="text" name="Location" />
 
-              <label for="NumberPeople">Number of people:</label>
-              <input type="number" name="NumberPeople" />
+            <label for="NumberPeople">Number of people:</label>
+            <input type="number" name="NumberPeople" />
 
-              <label for="Reference">How did you find us?</label>
-              <input type="text" name="Reference" />
+            <label for="Reference">How did you find us?</label>
+            <input type="text" name="Reference" />
 
-              <button type="submit">Send</button>
-            </FlexColumn>
-          </Form>
-        </div>
+            <button type="submit">Send</button>
+          </FlexColumn>
+        </Form>
       </FlexRow>
       <ReactMarkdown>
         {contact.slotParagraph}
