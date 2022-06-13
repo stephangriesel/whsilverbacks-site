@@ -6,6 +6,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 50%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -17,6 +18,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=FlexColumn.module.css.map */
