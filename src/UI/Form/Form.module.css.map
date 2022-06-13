@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;CACxB",
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,KAAK,EAAC,IAAI;CACX",
     "sources": [
         "Form.module.scss"
     ],
