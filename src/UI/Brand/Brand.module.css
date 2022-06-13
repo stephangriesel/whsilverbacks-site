@@ -8,6 +8,6 @@
 }
 
 .brand img {
-  width: 10em;
+  max-width: 10em !important;
 }
 /*# sourceMappingURL=Brand.module.css.map */
