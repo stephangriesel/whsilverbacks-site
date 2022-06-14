@@ -14,6 +14,8 @@ import 'swiper/css/scrollbar';
 
 // Image reveal
 import { Fade } from "react-awesome-reveal";
+import FlexRow from "../../UI/Layout/FlexRow/FlexRow";
+import FlexColumn from "../../UI/Layout/FlexColumn/FlexColumn";
 
 const query = `
 {
@@ -80,22 +82,28 @@ const HomePage = () => {
 
   return (
     <div>
-      <Fade delay={1000}>
-        <h1>
-          {home.title}
-        </h1>
-      </Fade>
-      <h2>
-        {home.heading}
-      </h2>
-      <img src={home.imagesCollection.items[0].url} alt="tent" />
-      <h3>{home.subHeading}</h3>
-      <p>{home.paragraphOne}</p>
-      <p>{home.paragraphTwo}</p>
-      <p>{home.paragraphThree}</p>
-      <p>{home.paragraphFour}</p>
-      <p>{home.paragraphFive}</p>
-      <p>{home.paragraphSix}</p>
+      <FlexRow>
+        <FlexColumn>
+          <Fade delay={1000}>
+            {/* <h1>
+              {home.title}
+            </h1> */}
+            <h2>
+              {home.heading}
+            </h2>
+            <h3>{home.subHeading}</h3>
+          <p>{home.paragraphOne}</p>
+          <p>{home.paragraphTwo}</p>
+          <p>{home.paragraphThree}</p>
+          <p>{home.paragraphFour}</p>
+          <p>{home.paragraphFive}</p>
+          <p>{home.paragraphSix}</p>
+          </Fade>
+        </FlexColumn>
+        <FlexColumn>
+          <img src={home.imagesCollection.items[0].url} alt="tent" />
+        </FlexColumn>
+      </FlexRow>
     </div>
   )
 }
