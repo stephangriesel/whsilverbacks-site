@@ -3,6 +3,8 @@ import React from 'react'
 import { useRef, useState, useEffect } from "react"
 
 import ReactMarkdown from 'react-markdown'
+import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
+import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
 const query = `
 {
@@ -66,35 +68,41 @@ const EventConstruction = () => {
 
   return (
     <div>
-      <h1>
-        {eventConstruction.title}
-      </h1>
-      <img src={eventConstruction.imagesCollection.items[0].url} alt="Events" />
-      <div>
-        <ReactMarkdown>
-          {eventConstruction.heading}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {eventConstruction.paragraph1}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {eventConstruction.paragraph2}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {eventConstruction.paragraph3}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {eventConstruction.paragraph4}
-        </ReactMarkdown>
-      </div>
+      <FlexRow>
+      <FlexColumn>
+          <img src={eventConstruction.imagesCollection.items[0].url} alt="Events" />
+        </FlexColumn>
+        <FlexColumn>
+          <h1>
+            {eventConstruction.title}
+          </h1>
+          <div>
+            <ReactMarkdown>
+              {eventConstruction.heading}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {eventConstruction.paragraph1}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {eventConstruction.paragraph2}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {eventConstruction.paragraph3}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {eventConstruction.paragraph4}
+            </ReactMarkdown>
+          </div>
+        </FlexColumn>
+      </FlexRow>
     </div>
   )
 }

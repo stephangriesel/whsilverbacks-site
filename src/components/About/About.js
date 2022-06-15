@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react"
+import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
+import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
 // TO DO: Query Update: About
 const query = `
@@ -64,23 +66,28 @@ const About = () => {
   }
   return (
     <div>
-      <h1>
-        {about.title}
-      </h1>
-      <h2>
-        {about.heading}
-      </h2>
-      <h3>{about.subHeading}</h3>
-      <p>{about.paragraphOne}</p>
-      <p>{about.paragraphTwo}</p>
-      <p>{about.paragraphThree}</p>
-      <p>{about.paragraphFour}</p>
-      <p>{about.paragraphFive}</p>
-      <p>{about.paragraphSix}</p>
-      <p>{about.testimonialOne}</p>
-      <p>{about.testimonialTwo}</p>
-      <p>{about.testimonialThree}</p>
-
+      <FlexRow>
+        <FlexColumn>
+          <h1>
+            {about.title}
+          </h1>
+          <h2>
+            {about.heading}
+          </h2>
+          <h3>{about.subHeading}</h3>
+          <p>{about.paragraphOne}</p>
+          <p>{about.paragraphTwo}</p>
+          <p>{about.paragraphThree}</p>
+        </FlexColumn>
+        <FlexColumn>
+          <p>{about.paragraphFour}</p>
+          <p>{about.paragraphFive}</p>
+          <p>{about.paragraphSix}</p>
+          <p>{about.testimonialOne}</p>
+          <p>{about.testimonialTwo}</p>
+          <p>{about.testimonialThree}</p>
+        </FlexColumn>
+      </FlexRow>
     </div>
   )
 }

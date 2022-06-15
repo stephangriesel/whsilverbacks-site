@@ -3,6 +3,8 @@ import React from 'react'
 import { useRef, useState, useEffect } from "react"
 
 import ReactMarkdown from 'react-markdown'
+import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
+import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
 const query = `
 {
@@ -68,50 +70,56 @@ const TemporaryStructures = () => {
 
   return (
     <div>
-      <h1>
-        {temporaryStructures.title}
-      </h1>
-      <img src={temporaryStructures.imagesCollection.items[0].url} alt="Events" />
-      <div>
-        <ReactMarkdown>
-          {temporaryStructures.paragraph1}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {temporaryStructures.paragraph2}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {temporaryStructures.paragraph3}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {temporaryStructures.paragraph4}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {temporaryStructures.paragraph5}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {temporaryStructures.paragraph6}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {temporaryStructures.paragraph7}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {temporaryStructures.paragraph8}
-        </ReactMarkdown>
-      </div>
+      <FlexRow>
+        <FlexColumn>
+          <h1>
+            {temporaryStructures.title}
+          </h1>
+          <img src={temporaryStructures.imagesCollection.items[0].url} alt="Events" />
+        </FlexColumn>
+        <FlexColumn>
+          <div>
+            <ReactMarkdown>
+              {temporaryStructures.paragraph1}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {temporaryStructures.paragraph2}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {temporaryStructures.paragraph3}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {temporaryStructures.paragraph4}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {temporaryStructures.paragraph5}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {temporaryStructures.paragraph6}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {temporaryStructures.paragraph7}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {temporaryStructures.paragraph8}
+            </ReactMarkdown>
+          </div>
+        </FlexColumn>
+      </FlexRow>
     </div>
   )
 }

@@ -3,6 +3,8 @@ import React from 'react'
 import { useRef, useState, useEffect } from "react"
 
 import ReactMarkdown from 'react-markdown'
+import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
+import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
 const query = `
 {
@@ -68,55 +70,61 @@ const StretchTents = () => {
 
   return (
     <div>
-      <h1>
-        {stretchTents.title}
-      </h1>
-      <img src={stretchTents.imagesCollection.items[0].url} alt="Events" />
-      <div>
-        <ReactMarkdown>
-          {stretchTents.paragraph1}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {stretchTents.paragraph2}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {stretchTents.paragraph3}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {stretchTents.paragraph4}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {stretchTents.paragraph5}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {stretchTents.paragraph6}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {stretchTents.paragraph7}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {stretchTents.paragraph8}
-        </ReactMarkdown>
-      </div>
-      <div>
-        <ReactMarkdown>
-          {stretchTents.paragraph9}
-        </ReactMarkdown>
-      </div>
+      <FlexRow>
+        <FlexColumn>
+          <h1>
+            {stretchTents.title}
+          </h1>
+          <img src={stretchTents.imagesCollection.items[0].url} alt="Events" />
+        </FlexColumn>
+        <FlexColumn>
+          <div>
+            <ReactMarkdown>
+              {stretchTents.paragraph1}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {stretchTents.paragraph2}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {stretchTents.paragraph3}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {stretchTents.paragraph4}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {stretchTents.paragraph5}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {stretchTents.paragraph6}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {stretchTents.paragraph7}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {stretchTents.paragraph8}
+            </ReactMarkdown>
+          </div>
+          <div>
+            <ReactMarkdown>
+              {stretchTents.paragraph9}
+            </ReactMarkdown>
+          </div>
+        </FlexColumn>
+      </FlexRow>
     </div>
   )
 
