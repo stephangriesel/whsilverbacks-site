@@ -22,7 +22,10 @@ const query = `
         middleTitle
         middleParagraph
         rightTitle
-        rightParagraph    
+        rightParagraph  
+        contactLineOne
+        contactLineTwo
+        contactLineThree  
       }
     }
   }
@@ -86,6 +89,21 @@ const Footer = () => {
                         <div>
                             <ReactMarkdown>
                                 {footer.middleParagraph}
+                            </ReactMarkdown>
+                        </div>
+                        <div>
+                            <ReactMarkdown>
+                                {footer.contactLineOne}
+                            </ReactMarkdown>
+                        </div>
+                        <div>
+                            <ReactMarkdown>
+                                {footer.contactLineTwo}
+                            </ReactMarkdown>
+                        </div>
+                        <div>
+                            <ReactMarkdown>
+                                {footer.contactLineThree}
                             </ReactMarkdown>
                         </div>
                     </div>
