@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,MAAM,EAAC,CAAC;EACR,OAAO,EAAC,CAAC;CACV",
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,MAAM,EAAC,OAAO;EACd,OAAO,EAAC,CAAC;CACV",
     "sources": [
         "Facebook.module.scss"
     ],
