@@ -59,7 +59,7 @@ const BrandHeader = () => {
     <Brand>
         <img src={header.logo.url} className="logo" alt="logo" />
         <h1>
-          {header.title}
+          {/* {header.title} */}
         </h1>
     </Brand>
   )
