@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,OAAO,EAAC,IAAI;CACb",
+    "sources": [
+        "Inline.module.scss"
+    ],
+    "names": [],
+    "file": "Inline.module.css"
+}
