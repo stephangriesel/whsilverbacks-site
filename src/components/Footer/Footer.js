@@ -7,6 +7,7 @@ import { FaEnvelope } from 'react-icons/fa'
 import Layout from '../../UI/Layout/Layout'
 import FlexEvenly from '../../UI/Layout/FlexEvenly/FlexEvenly'
 import JustifyCenter from '../../UI/Layout/JustifyCenter/JustifyCenter'
+import Inline from '../../UI/Inline/Inline'
 import FooterEnd from '../../UI/Layout/FooterEnd/FooterEnd'
 import Facebook from '../../UI/Social/Facebook/Facebook'
 import Instagram from '../../UI/Social/Instagram/Instagram'
@@ -115,14 +116,16 @@ const Footer = () => {
                             </h3>
                         </div>
                         <FlexEvenly>
-                            {/* Facebook */}
-                            <a href="https://www.facebook.com/WHSilverbacks">
-                                <Facebook />
-                            </a>
-                            {/* Instagram */}
-                            <a href="https://www.instagram.com/whsilverbacks/">
-                                <Instagram />
-                            </a>
+                            <Inline>
+                                {/* Facebook */}
+                                <a href="https://www.facebook.com/WHSilverbacks">
+                                    <Facebook />
+                                </a>
+                                {/* Instagram */}
+                                <a href="https://www.instagram.com/whsilverbacks/">
+                                    <Instagram />
+                                </a>
+                            </Inline>
                         </FlexEvenly>
                     </div>
                 </FlexEvenly>
