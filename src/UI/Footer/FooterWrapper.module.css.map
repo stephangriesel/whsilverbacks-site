@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACd,MAAM,EAAC,IAAI;EACX,KAAK,EAAC,IAAI;CACV",
+    "sources": [
+        "FooterWrapper.module.scss"
+    ],
+    "names": [],
+    "file": "FooterWrapper.module.css"
+}

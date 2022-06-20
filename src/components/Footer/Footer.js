@@ -8,6 +8,7 @@ import Layout from '../../UI/Layout/Layout'
 import FlexEvenly from '../../UI/Layout/FlexEvenly/FlexEvenly'
 import JustifyCenter from '../../UI/Layout/JustifyCenter/JustifyCenter'
 import Inline from '../../UI/Inline/Inline'
+import FooterWrapper from '../../UI/Footer/FooterWrapper'
 import FooterEnd from '../../UI/Layout/FooterEnd/FooterEnd'
 import Facebook from '../../UI/Social/Facebook/Facebook'
 import Instagram from '../../UI/Social/Instagram/Instagram'
@@ -69,7 +70,7 @@ const Footer = () => {
     }
     return (
         <Layout>
-            <div className='container'>
+            <FooterWrapper>
                 <FlexEvenly>
                     <div>
                         <h3>
@@ -134,7 +135,7 @@ const Footer = () => {
                         <small>WH Group Ltd. {new Date().getFullYear().toString()}</small>
                     </JustifyCenter>
                 </FooterEnd>
-            </div>
+            </FooterWrapper>
         </Layout>
     )
 }
