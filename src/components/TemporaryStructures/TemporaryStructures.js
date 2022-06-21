@@ -72,12 +72,12 @@ const TemporaryStructures = () => {
     <div>
       <FlexRow>
         <FlexColumn>
-          <h1>
-            {temporaryStructures.title}
-          </h1>
           <img src={temporaryStructures.imagesCollection.items[0].url} alt="Events" />
         </FlexColumn>
         <FlexColumn>
+        <h1>
+            {temporaryStructures.title}
+          </h1>
           <div>
             <ReactMarkdown>
               {temporaryStructures.paragraph1}
