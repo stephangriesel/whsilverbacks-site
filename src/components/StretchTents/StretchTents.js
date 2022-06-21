@@ -72,12 +72,12 @@ const StretchTents = () => {
     <div>
       <FlexRow>
         <FlexColumn>
-          <h1>
-            {stretchTents.title}
-          </h1>
           <img src={stretchTents.imagesCollection.items[0].url} alt="Events" />
         </FlexColumn>
         <FlexColumn>
+        <h1>
+            {stretchTents.title}
+          </h1>
           <div>
             <ReactMarkdown>
               {stretchTents.paragraph1}
