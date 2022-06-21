@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACZ,OAAO,EAAC,IAAI;EACZ,cAAc,EAAE,MAAM;EACtB,UAAU,EAAC,IAAI;EACf,MAAM,EAAC,IAAI;EACX,eAAe,EAAE,MAAM;CACxB",
+    "sources": [
+        "FullViewPort.module.scss"
+    ],
+    "names": [],
+    "file": "FullViewPort.module.css"
+}
