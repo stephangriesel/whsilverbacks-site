@@ -6,7 +6,8 @@ import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn'
 import Form from '../../UI/Form/Form'
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow'
 
-// TO DO: Query Update: Header
+import FullViewPort from '../../UI/FullViewPort/FullViewPort'
+
 const query = `
 {
   contactCollection {
@@ -56,11 +57,14 @@ const Contact = () => {
   }
 
   return (
-    <div>
+    <FullViewPort>
       <FlexRow>
         <FlexColumn>
           <h1>{contact.title}</h1>
           <h3>{contact.heading}</h3>
+          <ReactMarkdown>
+            {contact.slotParagraph}
+          </ReactMarkdown>
         </FlexColumn>
         <Form action="https://form.taxi/s/2dbsqdfa" method="POST">
           <FlexColumn>
@@ -89,10 +93,7 @@ const Contact = () => {
           </FlexColumn>
         </Form>
       </FlexRow>
-      <ReactMarkdown>
-        {contact.slotParagraph}
-      </ReactMarkdown>
-    </div>
+    </FullViewPort>
   )
 }
 
