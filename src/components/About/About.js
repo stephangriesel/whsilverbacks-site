@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react"
+import FullViewPort from '../../UI/FullViewPort/FullViewPort';
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
@@ -65,7 +66,7 @@ const About = () => {
     return "Loading...";
   }
   return (
-    <div>
+    <FullViewPort>
       <FlexRow>
         <FlexColumn>
           <h1>
@@ -88,7 +89,7 @@ const About = () => {
           <p>{about.testimonialThree}</p>
         </FlexColumn>
       </FlexRow>
-    </div>
+    </FullViewPort>
   )
 }
 
