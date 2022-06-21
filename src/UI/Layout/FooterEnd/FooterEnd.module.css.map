@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,MAAM,EAAC,KAAK;CACb",
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,MAAM,EAAC,OAAO;CACf",
     "sources": [
         "FooterEnd.module.scss"
     ],
