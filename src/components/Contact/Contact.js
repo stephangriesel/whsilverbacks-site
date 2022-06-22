@@ -8,6 +8,10 @@ import FlexRow from '../../UI/Layout/FlexRow/FlexRow'
 
 import FullViewPort from '../../UI/FullViewPort/FullViewPort'
 
+import JustifyCenter from '../../UI/Layout/JustifyCenter/JustifyCenter'
+
+import './contact.css'
+
 const query = `
 {
   contactCollection {
@@ -89,7 +93,9 @@ const Contact = () => {
             <label for="Reference">How did you find us?</label>
             <input type="text" name="Reference" />
 
-            <button type="submit">Send</button>
+            <JustifyCenter>
+              <button type="submit">Send</button>
+            </JustifyCenter>
           </FlexColumn>
         </Form>
       </FlexRow>
