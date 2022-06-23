@@ -4,6 +4,8 @@ import FullViewPort from '../../UI/FullViewPort/FullViewPort';
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
+import Slider from '../../UI/Slider/Slider'
+
 // TO DO: Query Update: About
 const query = `
 {
@@ -88,6 +90,9 @@ const About = () => {
           <p>{about.testimonialTwo}</p>
           <p>{about.testimonialThree}</p>
         </FlexColumn>
+      </FlexRow>
+      <FlexRow>
+        <Slider />
       </FlexRow>
     </FullViewPort>
   )
