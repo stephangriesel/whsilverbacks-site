@@ -1,35 +1,44 @@
 import React from 'react';
 
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
+// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+// import required modules
+import { EffectFade, Navigation, Pagination } from "swiper";
+
+// Swiper styles 
+import './styles.css';
 
 const Slider = (props) => {
   const children = props.children;
   return (
       <div>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
-          slidesPerView={3}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
-        >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-        </Swiper>
+              <Swiper
+                spaceBetween={30}
+                navigation={true}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[EffectFade, Navigation, Pagination]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <img
+                    src="https://picsum.photos/id/237/200/300"
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={300}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="https://picsum.photos/id/239/200/300"
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={300}
+                    className='border-radius-50' />
+                </SwiperSlide>
+              </Swiper>
       </div>
   )
 }

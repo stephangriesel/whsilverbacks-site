@@ -81,8 +81,6 @@ const About = () => {
           <p>{about.paragraphOne}</p>
           <p>{about.paragraphTwo}</p>
           <p>{about.paragraphThree}</p>
-        </FlexColumn>
-        <FlexColumn>
           <p>{about.paragraphFour}</p>
           <p>{about.paragraphFive}</p>
           <p>{about.paragraphSix}</p>
@@ -90,9 +88,11 @@ const About = () => {
           <p>{about.testimonialTwo}</p>
           <p>{about.testimonialThree}</p>
         </FlexColumn>
+        <FlexColumn>
+          <Slider />
+        </FlexColumn>
       </FlexRow>
       <FlexRow>
-        <Slider />
       </FlexRow>
     </FullViewPort>
   )
