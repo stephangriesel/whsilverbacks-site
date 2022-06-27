@@ -4,7 +4,7 @@ import FullViewPort from '../../UI/FullViewPort/FullViewPort';
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
-import Slider from '../../UI/Slider/Slider'
+import Slider from '../../UI/SliderAbout/SliderAbout'
 
 // TO DO: Query Update: About
 const query = `
@@ -13,6 +13,11 @@ const query = `
     items {
       title
       heading
+      imagesCollection {
+        items {
+          url
+        }
+      }
       subHeading
       paragraphOne
       paragraphTwo
