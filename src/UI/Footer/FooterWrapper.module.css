@@ -1,6 +1,12 @@
 .footerwrapper {
+  background-color: #404744;
   margin: 4em 0 0;
+  padding: 2em 0;
   height: 100%;
   width: 100%;
+}
+
+.footerwrapper p {
+  font-size: 0.9rem;
 }
 /*# sourceMappingURL=FooterWrapper.module.css.map */
