@@ -1,4 +1,6 @@
 .wrapper {
+  background: #55575a;
+  background: linear-gradient(315deg, #55575a 5%, #414141 19%, #424242 25%, #434343 53%, #6b6b6b 77%, #706c6c 100%);
   overflow-x: hidden;
   margin: 0;
 }
