@@ -12,12 +12,12 @@ const Navbar = () => {
   return (
     <Nav>
       <Flex>
-        <ListItem><Link to="/">Home</Link></ListItem>
-        <ListItem><Link to="/about">About</Link></ListItem>
-        <ListItem><Link to="/eventconstruction">Event Construction</Link></ListItem>
-        <ListItem><Link to="/stretchtents">Stretch Tents</Link></ListItem>
-        <ListItem><Link to="/temporarystructures">Temporary Structures</Link></ListItem>
-        <ListItem><Link to="/contact">Contact</Link></ListItem>
+        <ListItem><Link to="/">HOME</Link></ListItem>
+        <ListItem><Link to="/about">ABOUT</Link></ListItem>
+        <ListItem><Link to="/eventconstruction">EVENT CONSTRUCTION</Link></ListItem>
+        <ListItem><Link to="/stretchtents">STRETCH TENTS</Link></ListItem>
+        <ListItem><Link to="/temporarystructures">TEMPORARY STRUCTURES</Link></ListItem>
+        <ListItem><Link to="/contact">CONTACT</Link></ListItem>
       </Flex>
     </Nav>
   )
