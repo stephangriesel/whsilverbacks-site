@@ -5,6 +5,7 @@ import { useRef, useState, useEffect } from "react"
 import ReactMarkdown from 'react-markdown'
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
+import Inline from '../../UI/Inline/Inline'
 
 const query = `
 {
@@ -37,6 +38,7 @@ const { REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN } = process.env;
 
 const StretchTents = () => {
   // define the initial state
+  const [isActive, setIsActive] = useState(false);
   const [stretchTents, setStretchTents] = useState(null);
 
   useEffect(() => {
@@ -75,7 +77,7 @@ const StretchTents = () => {
           <img src={stretchTents.imagesCollection.items[0].url} alt="Events" />
         </FlexColumn>
         <FlexColumn>
-        <h1>
+          <h1>
             {stretchTents.title}
           </h1>
           <div>
@@ -109,14 +111,26 @@ const StretchTents = () => {
             </ReactMarkdown>
           </div>
           <div>
-            <ReactMarkdown>
-              {stretchTents.paragraph7}
-            </ReactMarkdown>
+           
           </div>
           <div>
-            <ReactMarkdown>
-              {stretchTents.paragraph8}
-            </ReactMarkdown>
+            <div className='accordion-item'>
+              <div
+                className='accordion-title'
+                onClick={() => setIsActive(!isActive)}
+              >
+                <Inline> <ReactMarkdown>
+              {stretchTents.paragraph7}
+            </ReactMarkdown><div>{isActive ? '-' : '+'}</div></Inline>
+              </div>
+              {isActive && (
+                <div className='accordion-content'>
+                  <ReactMarkdown>
+                    {stretchTents.paragraph8}
+                  </ReactMarkdown>
+                </div>
+              )}
+            </div>
           </div>
           <div>
             <ReactMarkdown>
