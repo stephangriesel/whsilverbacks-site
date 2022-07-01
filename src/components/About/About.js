@@ -4,8 +4,6 @@ import FullViewPort from '../../UI/FullViewPort/FullViewPort';
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
-import Slider from '../../UI/SliderAbout/SliderAbout'
-
 // TO DO: Query Update: About
 const query = `
 {
@@ -13,11 +11,6 @@ const query = `
     items {
       title
       heading
-      imagesCollection {
-        items {
-          url
-        }
-      }
       subHeading
       paragraphOne
       paragraphTwo
@@ -32,6 +25,12 @@ const query = `
       testimonialThree
       testimonialFour
       testimonialFive
+      imageOne {
+        url
+      }
+      imageTwo {
+        url
+      }
     }
   }
 }
@@ -82,22 +81,23 @@ const About = () => {
           <h2>
             {about.heading}
           </h2>
-          <h3>{about.subHeading}</h3>
+          {/* <h3>{about.subHeading}</h3> */}
+          <img src={about.imageOne.url} alt="sunrise" />
           <p>{about.paragraphOne}</p>
           <p>{about.paragraphTwo}</p>
+        </FlexColumn>
+        <FlexColumn>
           <p>{about.paragraphThree}</p>
           <p>{about.paragraphFour}</p>
           <p>{about.paragraphFive}</p>
+          <img src={about.imageTwo.url} alt="crane" />
           <p>{about.paragraphSix}</p>
-          <p>{about.testimonialOne}</p>
-          <p>{about.testimonialTwo}</p>
-          <p>{about.testimonialThree}</p>
-        </FlexColumn>
-        <FlexColumn>
-          <Slider />
         </FlexColumn>
       </FlexRow>
       <FlexRow>
+        <p>{about.testimonialOne}</p>
+        <p>{about.testimonialTwo}</p>
+        <p>{about.testimonialThree}</p>
       </FlexRow>
     </FullViewPort>
   )
