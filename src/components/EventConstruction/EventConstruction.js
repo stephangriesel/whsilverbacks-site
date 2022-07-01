@@ -70,7 +70,7 @@ const EventConstruction = () => {
     <div>
       <FlexRow>
       <FlexColumn>
-          <img src={eventConstruction.imagesCollection.items[0].url} alt="Events" />
+          <img class="shadow" src={eventConstruction.imagesCollection.items[0].url} alt="Events" />
         </FlexColumn>
         <FlexColumn>
           <h1>

@@ -82,7 +82,7 @@ const About = () => {
             {about.heading}
           </h2>
           {/* <h3>{about.subHeading}</h3> */}
-          <img src={about.imageOne.url} alt="sunrise" />
+          <img class="shadow" src={about.imageOne.url} alt="sunrise" />
           <p>{about.paragraphOne}</p>
           <p>{about.paragraphTwo}</p>
         </FlexColumn>

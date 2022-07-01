@@ -28,6 +28,12 @@ html a:hover {
 html img {
   max-width: 1200px;
   width: 100%;
+  border-radius: 1%;
+}
+
+html img.shadow {
+  -webkit-box-shadow: 7px 7px 42px 11px rgba(105, 105, 105, 0.85);
+  box-shadow: 7px 7px 42px 11px rgba(105, 105, 105, 0.85);
 }
 
 html .accordion {
