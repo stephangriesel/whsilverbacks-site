@@ -25,6 +25,11 @@ html a:hover {
   transition: ease-in-out 0.5s;
 }
 
+html img {
+  max-width: 1200px;
+  width: 100%;
+}
+
 html .accordion {
   max-width: 90%;
   margin: 2rem auto;
