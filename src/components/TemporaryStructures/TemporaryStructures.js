@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { useRef, useState, useEffect } from "react"
+import { useRef, useState, useEffect } from "react";
+
+import { Fade } from "react-awesome-reveal";
 
 import ReactMarkdown from 'react-markdown'
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
@@ -80,7 +82,9 @@ const TemporaryStructures = () => {
     <div>
       <FlexRow>
         <FlexColumn>
-          <img src={temporaryStructures.imagesCollection.items[0].url} alt="Events" />
+        <Fade delay={200}>
+          <img  className="shadow" src={temporaryStructures.imagesCollection.items[0].url} alt="Events" />
+        </Fade>
         </FlexColumn>
         <FlexColumn>
           <h1>

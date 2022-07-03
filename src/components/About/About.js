@@ -4,6 +4,8 @@ import FullViewPort from '../../UI/FullViewPort/FullViewPort';
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
+import { Fade } from "react-awesome-reveal";
+
 // TO DO: Query Update: About
 const query = `
 {
@@ -81,8 +83,9 @@ const About = () => {
           <h2>
             {about.heading}
           </h2>
-          {/* <h3>{about.subHeading}</h3> */}
-          <img class="shadow" src={about.imageOne.url} alt="sunrise" />
+          <Fade delay={200}>
+            <img className="shadow" src={about.imageOne.url} alt="sunrise" />
+          </Fade>
           <p>{about.paragraphOne}</p>
           <p>{about.paragraphTwo}</p>
         </FlexColumn>
@@ -90,7 +93,9 @@ const About = () => {
           <p>{about.paragraphThree}</p>
           <p>{about.paragraphFour}</p>
           <p>{about.paragraphFive}</p>
-          <img src={about.imageTwo.url} alt="crane" />
+          <Fade delay={200}>
+            <img className="shadow" src={about.imageTwo.url} alt="crane" />
+          </Fade>
           <p>{about.paragraphSix}</p>
         </FlexColumn>
       </FlexRow>

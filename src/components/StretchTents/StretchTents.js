@@ -2,6 +2,8 @@ import React from 'react'
 
 import { useRef, useState, useEffect } from "react"
 
+import { Fade } from "react-awesome-reveal";
+
 import ReactMarkdown from 'react-markdown'
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
@@ -74,7 +76,9 @@ const StretchTents = () => {
     <div>
       <FlexRow>
         <FlexColumn>
-          <img src={stretchTents.imagesCollection.items[0].url} alt="Events" />
+        <Fade delay={200}>
+          <img  className="shadow" src={stretchTents.imagesCollection.items[0].url} alt="Events" />
+        </Fade>
         </FlexColumn>
         <FlexColumn>
           <h1>

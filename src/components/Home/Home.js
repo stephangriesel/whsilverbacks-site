@@ -1,18 +1,11 @@
 import { useState, useEffect } from "react"
 
-// Swiper React components
-// import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Swiper required modules
-// import { EffectFade, Navigation, Pagination } from "swiper";
-
 // Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-// Image reveal
 import { Fade } from "react-awesome-reveal";
 import FlexRow from "../../UI/Layout/FlexRow/FlexRow";
 import FlexColumn from "../../UI/Layout/FlexColumn/FlexColumn";
@@ -49,7 +42,6 @@ const HomePage = () => {
 
   // define the initial state
   const [home, setHome] = useState(null);
-  console.log("check content state:", home);
 
   useEffect(() => {
     window
@@ -84,10 +76,6 @@ const HomePage = () => {
     <div>
       <FlexRow>
         <FlexColumn>
-          <Fade delay={1000}>
-            {/* <h1>
-              {home.title}
-            </h1> */}
             <h2>
               {home.heading}
             </h2>
@@ -98,10 +86,11 @@ const HomePage = () => {
           <p>{home.paragraphFour}</p>
           <p>{home.paragraphFive}</p>
           <p>{home.paragraphSix}</p>
-          </Fade>
         </FlexColumn>
         <FlexColumn>
-          <img src={home.imagesCollection.items[0].url} alt="tent" />
+        <Fade delay={200}>
+          <img className="shadow" src={home.imagesCollection.items[0].url} alt="tent" />
+        </Fade>
         </FlexColumn>
       </FlexRow>
     </div>

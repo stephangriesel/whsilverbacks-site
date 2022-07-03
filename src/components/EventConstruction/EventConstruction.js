@@ -6,6 +6,8 @@ import ReactMarkdown from 'react-markdown'
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
+import { Fade } from "react-awesome-reveal";
+
 const query = `
 {
   eventConstructionCollection {
@@ -72,7 +74,9 @@ const EventConstruction = () => {
     <div>
       <FlexRow>
         <FlexColumn>
-          <img class="shadow" src={eventConstruction.imagesCollection.items[0].url} alt="Events" />
+          <Fade delay={200}>
+            <img className="shadow" src={eventConstruction.imagesCollection.items[0].url} alt="Events" />
+          </Fade>
         </FlexColumn>
         <FlexColumn>
           <h1>
