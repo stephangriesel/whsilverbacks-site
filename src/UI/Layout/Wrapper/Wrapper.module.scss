@@ -1,27 +1,50 @@
 .wrapper {
-  background: rgb(85,87,90);
-  background: linear-gradient(315deg, rgba(85,87,90,1) 5%, rgba(65,65,65,1) 19%, rgba(66,66,66,1) 25%, rgba(67,67,67,1) 53%, rgba(107,107,107,1) 77%, rgba(112,108,108,1) 100%);
-  overflow-x:hidden;
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+  background: rgb(85, 87, 90);
+  background: linear-gradient(
+    315deg,
+    rgba(85, 87, 90, 1) 5%,
+    rgba(65, 65, 65, 1) 19%,
+    rgba(66, 66, 66, 1) 25%,
+    rgba(67, 67, 67, 1) 53%,
+    rgba(107, 107, 107, 1) 77%,
+    rgba(112, 108, 108, 1) 100%
+  );
+  overflow-x: hidden;
   // margin:1rem;
+
+  .navtext {
+    font-family: 'Roboto', sans-serif;
+  }
   h1 {
     margin: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.1rem;
   }
   h2 {
     margin: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.1rem;
   }
   h3 {
     margin: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.1rem;
   }
   p {
-    margin:1rem;
+    margin: 1rem;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .wrapper {
-    margin:0rem;
+    margin: 0rem;
     img {
-      margin:0rem;
+      margin: 0rem;
     }
   }
 }
