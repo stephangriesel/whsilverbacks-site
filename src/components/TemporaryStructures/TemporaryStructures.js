@@ -6,6 +6,8 @@ import ReactMarkdown from 'react-markdown'
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
+import Inline from '../../UI/Inline/Inline'
+
 const query = `
 {
   temporaryStructuresCollection {
@@ -17,6 +19,9 @@ const query = `
           url
         }
       }
+      preHeading3
+      preHeading4
+      preHeading5
       paragraph1
       paragraph2
       paragraph3
@@ -36,6 +41,9 @@ const { REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN } = process.env;
 
 const TemporaryStructures = () => {
   // define the initial state
+  const [isActiveOne, setIsActiveOne] = useState(false);
+  const [isActiveTwo, setIsActiveTwo] = useState(false);
+  const [isActiveThree, setIsActiveThree] = useState(false);
   const [temporaryStructures, setTemporaryStructures] = useState(null);
 
   useEffect(() => {
@@ -75,7 +83,7 @@ const TemporaryStructures = () => {
           <img src={temporaryStructures.imagesCollection.items[0].url} alt="Events" />
         </FlexColumn>
         <FlexColumn>
-        <h1>
+          <h1>
             {temporaryStructures.title}
           </h1>
           <div>
@@ -88,21 +96,73 @@ const TemporaryStructures = () => {
               {temporaryStructures.paragraph2}
             </ReactMarkdown>
           </div>
-          <div>
-            <ReactMarkdown>
-              {temporaryStructures.paragraph3}
-            </ReactMarkdown>
+
+          <div className='accordion-item'>
+            <div
+              className='accordion-title'
+              onClick={() => setIsActiveOne(!isActiveOne)}
+            >
+              <Inline>
+                <ReactMarkdown>
+                  {temporaryStructures.preHeading3}
+                </ReactMarkdown>
+                <div>{isActiveOne ? '-' : '+'}
+                </div>
+              </Inline>
+            </div>
+            {isActiveOne && (
+              <div className='accordion-content'>
+                <p>
+                  {temporaryStructures.paragraph3}
+                </p>
+              </div>
+            )}
           </div>
-          <div>
-            <ReactMarkdown>
-              {temporaryStructures.paragraph4}
-            </ReactMarkdown>
+
+          <div className='accordion-item'>
+            <div
+              className='accordion-title'
+              onClick={() => setIsActiveTwo(!isActiveTwo)}
+            >
+              <Inline>
+                <ReactMarkdown>
+                  {temporaryStructures.preHeading4}
+                </ReactMarkdown>
+                <div>{isActiveTwo ? '-' : '+'}
+                </div>
+              </Inline>
+            </div>
+            {isActiveTwo && (
+              <div className='accordion-content'>
+                <p>
+                  {temporaryStructures.paragraph4}
+                </p>
+              </div>
+            )}
           </div>
-          <div>
-            <ReactMarkdown>
-              {temporaryStructures.paragraph5}
-            </ReactMarkdown>
+
+          <div className='accordion-item'>
+            <div
+              className='accordion-title'
+              onClick={() => setIsActiveThree(!isActiveThree)}
+            >
+              <Inline>
+                <ReactMarkdown>
+                  {temporaryStructures.preHeading5}
+                </ReactMarkdown>
+                <div>{isActiveThree ? '-' : '+'}
+                </div>
+              </Inline>
+            </div>
+            {isActiveThree && (
+              <div className='accordion-content'>
+                <p className='accordion-paragraph'>
+                  {temporaryStructures.paragraph5}
+                </p>
+              </div>
+            )}
           </div>
+
           <div>
             <ReactMarkdown>
               {temporaryStructures.paragraph6}
