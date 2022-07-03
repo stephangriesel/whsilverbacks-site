@@ -33,6 +33,14 @@ html {
 
   // Accordion test
 
+  .accordion-title {
+    cursor: pointer;
+    background-color:rgba(0, 0, 0, 0.3);
+    :hover {
+      background-color:rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+
   .accordion {
     max-width: 90%;
     margin: 2rem auto;

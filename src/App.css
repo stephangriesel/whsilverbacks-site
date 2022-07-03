@@ -36,6 +36,15 @@ html img.shadow {
   box-shadow: 7px 7px 42px 11px rgba(105, 105, 105, 0.85);
 }
 
+html .accordion-title {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+html .accordion-title :hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
 html .accordion {
   max-width: 90%;
   margin: 2rem auto;
