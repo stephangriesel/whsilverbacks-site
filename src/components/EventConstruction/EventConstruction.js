@@ -17,8 +17,10 @@ const query = `
           url
         }
       }
+      preHeading1
       paragraph1
       paragraph2
+      preHeading3
       paragraph3
       paragraph4
     }
@@ -69,7 +71,7 @@ const EventConstruction = () => {
   return (
     <div>
       <FlexRow>
-      <FlexColumn>
+        <FlexColumn>
           <img class="shadow" src={eventConstruction.imagesCollection.items[0].url} alt="Events" />
         </FlexColumn>
         <FlexColumn>
@@ -82,6 +84,11 @@ const EventConstruction = () => {
             </ReactMarkdown>
           </div>
           <div>
+            <h3>
+              {eventConstruction.preHeading1}
+            </h3>
+          </div>
+          <div>
             <ReactMarkdown>
               {eventConstruction.paragraph1}
             </ReactMarkdown>
@@ -90,6 +97,11 @@ const EventConstruction = () => {
             <ReactMarkdown>
               {eventConstruction.paragraph2}
             </ReactMarkdown>
+          </div>
+          <div>
+            <h3>
+              {eventConstruction.preHeading3}
+            </h3>
           </div>
           <div>
             <ReactMarkdown>
