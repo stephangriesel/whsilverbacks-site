@@ -7,4 +7,17 @@
           justify-content: center;
   width: 100%;
 }
+
+.form button {
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #F5F5F5;
+}
+
+.form button:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  background-color: #262626;
+  color: #F5F5F5;
+}
 /*# sourceMappingURL=Form.module.css.map */

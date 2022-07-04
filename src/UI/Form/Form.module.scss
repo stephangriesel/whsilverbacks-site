@@ -2,4 +2,14 @@
   display:flex;
   justify-content: center;
   width:100%;
+  button {
+    border-radius: 15px;
+    cursor: pointer;
+    background-color:#F5F5F5;
+    &:hover {
+      transition: ease-in-out 0.5s;
+      background-color:  #262626;
+      color:#F5F5F5;
+    }
+  }
 }
