@@ -8,6 +8,15 @@ import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 
 import { Fade } from "react-awesome-reveal";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// import required modules
+import { EffectFade, Navigation, Pagination } from "swiper";
+
+// Swiper styles 
+import './styles.css';
+
 const query = `
 {
   eventConstructionCollection {
@@ -75,7 +84,48 @@ const EventConstruction = () => {
       <FlexRow>
         <FlexColumn>
           <Fade delay={200}>
-            <img className="shadow" src={eventConstruction.imagesCollection.items[0].url} alt="Events" />
+            <Swiper
+                spaceBetween={30}
+                navigation={true}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[EffectFade, Navigation, Pagination]}
+                className="mySwiper shadow"
+              >
+                <SwiperSlide>
+                  <img
+                    src={eventConstruction.imagesCollection.items[0].url}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={300}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={eventConstruction.imagesCollection.items[3].url}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={300}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={eventConstruction.imagesCollection.items[4].url}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={300}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={eventConstruction.imagesCollection.items[5].url}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={300}
+                    className='border-radius-50' />
+                </SwiperSlide>
+              </Swiper>
           </Fade>
         </FlexColumn>
         <FlexColumn>
