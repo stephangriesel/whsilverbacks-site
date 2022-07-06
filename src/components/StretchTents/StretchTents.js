@@ -9,6 +9,15 @@ import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
 import Inline from '../../UI/Inline/Inline'
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// import required modules
+import { EffectFade, Navigation, Pagination } from "swiper";
+
+// Swiper styles 
+import './styles.css';
+
 const query = `
 {
   stretchTentsCollection {
@@ -77,8 +86,49 @@ const StretchTents = () => {
       <FlexRow>
         <FlexColumn>
         <Fade delay={200}>
-          <img  className="shadow" src={stretchTents.imagesCollection.items[0].url} alt="Events" />
-        </Fade>
+            <Swiper
+                spaceBetween={30}
+                navigation={true}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[EffectFade, Navigation, Pagination]}
+                className="mySwiper shadow"
+              >
+                <SwiperSlide>
+                  <img
+                    src={stretchTents.imagesCollection.items[0].url}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={300}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={stretchTents.imagesCollection.items[1].url}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={300}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={stretchTents.imagesCollection.items[2].url}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={300}
+                    className='border-radius-50' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={stretchTents.imagesCollection.items[4].url}
+                    alt='installation'
+                    placeholder='tracedSVG'
+                    width={300}
+                    className='border-radius-50' />
+                </SwiperSlide>
+              </Swiper>
+          </Fade>
         </FlexColumn>
         <FlexColumn>
           <h1>
