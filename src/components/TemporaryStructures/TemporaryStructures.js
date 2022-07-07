@@ -99,7 +99,6 @@ const TemporaryStructures = () => {
                   clickable: true,
                 }}
                 modules={[EffectFade, Navigation, Pagination]}
-                className="mySwiper shadow"
               >
                 <SwiperSlide>
                   <img
