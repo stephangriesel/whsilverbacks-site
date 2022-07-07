@@ -20,7 +20,6 @@ const Slider = (props) => {
                   clickable: true,
                 }}
                 modules={[EffectFade, Navigation, Pagination]}
-                className="mySwiper"
               >
                 <SwiperSlide>
                   <img
