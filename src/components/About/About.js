@@ -1,8 +1,8 @@
-import React from 'react'
-import { useState, useEffect } from "react"
-import FullViewPort from '../../UI/FullViewPort/FullViewPort';
-import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn';
-import FlexRow from '../../UI/Layout/FlexRow/FlexRow';
+import React from "react";
+import { useState, useEffect } from "react";
+import FullViewPort from "../../UI/FullViewPort/FullViewPort";
+import FlexColumn from "../../UI/Layout/FlexColumn/FlexColumn";
+import FlexRow from "../../UI/Layout/FlexRow/FlexRow";
 
 import { Fade } from "react-awesome-reveal";
 
@@ -36,7 +36,7 @@ const query = `
     }
   }
 }
-`
+`;
 
 // Environment variables
 const { REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN } = process.env;
@@ -48,17 +48,20 @@ const About = () => {
   useEffect(() => {
     window
       // Change to template string & use template literals to define environment variable
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/${REACT_APP_SPACE_ID}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // Authenticate the request
-          Authorization: `Bearer ${REACT_APP_CDA_TOKEN}`,
-        },
-        // send the GraphQL query
-        body: JSON.stringify({ query }),
-      })
-      .then((response) => response.json())
+      .fetch(
+        `https://graphql.contentful.com/content/v1/spaces/${REACT_APP_SPACE_ID}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // Authenticate the request
+            Authorization: `Bearer ${REACT_APP_CDA_TOKEN}`,
+          },
+          // send the GraphQL query
+          body: JSON.stringify({ query }),
+        }
+      )
+      .then(response => response.json())
       .then(({ data, errors }) => {
         if (errors) {
           console.error(errors);
@@ -77,14 +80,10 @@ const About = () => {
     <FullViewPort>
       <FlexRow>
         <FlexColumn>
-          <h1>
-            {about.title}
-          </h1>
-          <h2>
-            {about.heading}
-          </h2>
+          <h1>{about.title}</h1>
+          <h2>{about.heading}</h2>
           <Fade delay={200}>
-            <img className="shadow" src={about.imageOne.url} alt="sunrise" />
+            <img src={about.imageOne.url} alt="sunrise" />
           </Fade>
           <p>{about.paragraphOne}</p>
           <p>{about.paragraphTwo}</p>
@@ -94,7 +93,7 @@ const About = () => {
           <p>{about.paragraphFour}</p>
           <p>{about.paragraphFive}</p>
           <Fade delay={200}>
-            <img className="shadow" src={about.imageTwo.url} alt="crane" />
+            <img src={about.imageTwo.url} alt="crane" />
           </Fade>
           <p>{about.paragraphSix}</p>
         </FlexColumn>
@@ -105,7 +104,7 @@ const About = () => {
         <p>{about.testimonialThree}</p>
       </FlexRow>
     </FullViewPort>
-  )
-}
+  );
+};
 
-export default About
+export default About;

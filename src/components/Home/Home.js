@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
 // Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 import { Fade } from "react-awesome-reveal";
 import FlexRow from "../../UI/Layout/FlexRow/FlexRow";
@@ -33,30 +33,32 @@ const query = `
     }
   }
 }
-`
+`;
 
 // Environment variables
 const { REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN } = process.env;
 
 const HomePage = () => {
-
   // define the initial state
   const [home, setHome] = useState(null);
 
   useEffect(() => {
     window
       // Change to template string & use template literals to define environment variable
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/${REACT_APP_SPACE_ID}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // Authenticate the request
-          Authorization: `Bearer ${REACT_APP_CDA_TOKEN}`,
-        },
-        // send the GraphQL query
-        body: JSON.stringify({ query }),
-      })
-      .then((response) => response.json())
+      .fetch(
+        `https://graphql.contentful.com/content/v1/spaces/${REACT_APP_SPACE_ID}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // Authenticate the request
+            Authorization: `Bearer ${REACT_APP_CDA_TOKEN}`,
+          },
+          // send the GraphQL query
+          body: JSON.stringify({ query }),
+        }
+      )
+      .then(response => response.json())
       .then(({ data, errors }) => {
         if (errors) {
           console.error(errors);
@@ -76,10 +78,8 @@ const HomePage = () => {
     <div>
       <FlexRow>
         <FlexColumn>
-            <h2>
-              {home.heading}
-            </h2>
-            <h3>{home.subHeading}</h3>
+          <h2>{home.heading}</h2>
+          <h3>{home.subHeading}</h3>
           <p>{home.paragraphOne}</p>
           <p>{home.paragraphTwo}</p>
           <p>{home.paragraphThree}</p>
@@ -88,13 +88,13 @@ const HomePage = () => {
           <p>{home.paragraphSix}</p>
         </FlexColumn>
         <FlexColumn>
-        <Fade delay={200}>
-          <img className="shadow" src={home.imagesCollection.items[0].url} alt="tent" />
-        </Fade>
+          <Fade delay={200}>
+            <img src={home.imagesCollection.items[0].url} alt="tent" />
+          </Fade>
         </FlexColumn>
       </FlexRow>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
