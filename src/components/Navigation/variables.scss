@@ -1,0 +1,16 @@
+$sm: 37.5em;
+$md: 48em;
+
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+$header-height:72px;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media (min-width: $md){
+      @content;
+    }
+  }
+}

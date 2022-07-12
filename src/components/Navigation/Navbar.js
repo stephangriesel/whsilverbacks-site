@@ -1,37 +1,28 @@
 import React, { useRef, useState } from 'react'
-
 import { Link } from 'react-router-dom';
-
-import Flex from '../../UI/Layout/Flex/Flex'
-import ListItem from '../../UI/List/ListItem'
-
 import './styles.css'
-
-// Navbar Styles
-import Nav from '../../UI/Nav/Nav'
+import styles from './Navbar.modules.scss';
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
   return (
-    <Nav>
-      <div className={isMobile ? "nav-links-mobile" : "nav-links"}
-      onClick={() => setIsMobile(false)}
-      >
-        <Flex>
-          <ListItem><Link to="/">HOME</Link></ListItem>
-          <ListItem><Link to="/about">ABOUT</Link></ListItem>
-          <ListItem><Link to="/eventconstruction">EVENT CONSTRUCTION</Link></ListItem>
-          <ListItem><Link to="/stretchtents">STRETCH TENTS</Link></ListItem>
-          <ListItem><Link to="/temporarystructures">TEMPORARY STRUCTURES</Link></ListItem>
-          <ListItem><Link to="/contact">CONTACT</Link></ListItem>
-        </Flex>
-        <button className='mobile-menu-icon'
-        onClick={() => setIsMobile(!isMobile)}
-        >
-          {isMobile ? <i className='fas fa-times'></i> : <i className='fas fa-bars'></i>}
-        </button>
+    <div className={styles.navigation}>
+      <div className={styles.navigation__content}>
+        <div>
+          <div>
+            <nav className={styles.navlinks}>
+              <a className={styles.navlinks__item} href="/">Home</a>
+              <a className={styles.navlinks__item} href="/">Event Construction</a>
+              <a className={styles.navlinks__item} href="/">Stretch Tents</a>
+              <a className={styles.navlinks__item} href="/">Temporary Structures</a>
+              <a className={styles.navlinks__item} href="/">Contact</a>
+            </nav>
+          </div>
+          <div>
+            <button className={styles.navigation__toggler}></button>
+          </div>
+        </div>
       </div>
-    </Nav>
+    </div>
   )
 }
 
