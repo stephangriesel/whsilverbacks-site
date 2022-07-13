@@ -1,0 +1,28 @@
+.Navbar nav ul li {
+  display:inline-block;
+  margin:1.0vw;
+}
+
+.Navbar nav ul li a {
+  text-decoration: none;
+  color:#fff;
+}
+
+.Navbar a:hover {
+  border-bottom:5px solid #bd5100;
+}
+
+.Navbar .MobileNavigation {
+  display:none;
+}
+
+@media (max-width: 990px){
+  .Navbar .Navigation {
+    display:none;
+  }
+
+  .Navbar .MobileNavigation {
+    display:flex;
+    background-color: red;
+  }
+}
