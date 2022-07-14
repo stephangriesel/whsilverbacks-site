@@ -23,6 +23,12 @@
 
   .Navbar .MobileNavigation {
     display:flex;
+    align-items: center;
     background-color: red;
+  }
+
+  .Navbar .MobileNavigation .Hamburger {
+    position:absolute;
+    right:5%;
   }
 }
