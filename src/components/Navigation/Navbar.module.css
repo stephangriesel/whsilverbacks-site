@@ -50,8 +50,8 @@ ul, li {
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    -webkit-transform: translate(-300px, 190px);
-            transform: translate(-300px, 190px);
+    top: 94px;
+    left: 0px;
     width: 100%;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.9);
