@@ -10,10 +10,12 @@ const MobileNavigation = () => {
   const hamburgerIcon = <GiHamburgerMenu className={classes.Hamburger} size='40px' color="white" onClick={() => setOpen(!open)}/>
   const hamburgerClose = <FaWindowClose className={classes.Hamburger} size='40px' color="white" onClick={() => setOpen(!open)}/>
 
+  const closeMobileMenu = () => setOpen(false);
+
   return (
     <nav className={classes.MobileNavigation}>
       {open ? hamburgerClose : hamburgerIcon}
-      {open && <NavLinks />}
+      {open && <NavLinks isMobile={true} closeMobileMenu={closeMobileMenu} />}
     </nav>
   );
 }
