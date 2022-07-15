@@ -1,6 +1,12 @@
+ul,li {
+  margin:0;
+  padding:0;
+}
+
 .Navbar nav ul li {
   display:inline-block;
   margin:1.0vw;
+  padding:10px;
 }
 
 .Navbar nav ul li a {
@@ -16,7 +22,11 @@
   display:none;
 }
 
-@media (max-width: 990px){
+@media (max-width: 1200px){
+  .Navbar {
+    width:100%;
+  }
+
   .Navbar .Navigation {
     display:none;
   }
@@ -24,11 +34,22 @@
   .Navbar .MobileNavigation {
     display:flex;
     align-items: center;
-    background-color: red;
   }
 
   .Navbar .MobileNavigation .Hamburger {
     position:absolute;
     right:5%;
+  }
+
+  .Navbar nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translate(-300px, 190px);
+    width: 100%;
+    // text-align: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0,0.9);
+    border-top:3px solid #bd5100;
   }
 }
