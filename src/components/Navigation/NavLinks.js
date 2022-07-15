@@ -1,22 +1,22 @@
-const NavLinks = () => {
+const NavLinks = (props) => {
   return (
     <ul>
-      <li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <a href="/">HOME</a>
       </li>
-      <li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <a href="/about">ABOUT</a>
       </li>
-      <li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <a href="/eventconstruction">EVENT CONSTRUCTION</a>
       </li>
-      <li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <a href="/stretchtents">STRETCH TENTS</a>
       </li>
-      <li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <a href="/temporarystructures">TEMPORARY STRUCTURES</a>
       </li>
-      <li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <a href="/contact">CONTACT</a>
       </li>
     </ul>
