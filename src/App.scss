@@ -19,7 +19,7 @@ html {
   }
   a:hover {
     color: #bd5100;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.2s;
   }
 
   img {
@@ -79,7 +79,7 @@ html {
     .accordion-item {
       flex-basis: 20px;
       flex-grow: 0;
-      transition: flex-grow 2s ease-out;
+      transition: flex-grow 1s ease-out;
       &.accordion-content {
         flex-grow: 1;
       }
