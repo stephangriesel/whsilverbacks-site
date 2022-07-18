@@ -78,6 +78,11 @@ const HomePage = () => {
     <div>
       <FlexRow>
         <FlexColumn>
+          <Fade delay={200}>
+            <img src={home.imagesCollection.items[0].url} alt="tent" />
+          </Fade>
+        </FlexColumn>
+        <FlexColumn>
           <h2>{home.heading}</h2>
           <h3>{home.subHeading}</h3>
           <p>{home.paragraphOne}</p>
@@ -86,11 +91,6 @@ const HomePage = () => {
           <p>{home.paragraphFour}</p>
           <p>{home.paragraphFive}</p>
           <p>{home.paragraphSix}</p>
-        </FlexColumn>
-        <FlexColumn>
-          <Fade delay={200}>
-            <img src={home.imagesCollection.items[0].url} alt="tent" />
-          </Fade>
         </FlexColumn>
       </FlexRow>
     </div>
