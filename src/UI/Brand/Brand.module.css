@@ -8,6 +8,12 @@
 }
 
 .brand img {
-  max-width: 10em !important;
+  max-width: 13em !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .brand img {
+    max-width: 40em !important;
+  }
 }
 /*# sourceMappingURL=Brand.module.css.map */
