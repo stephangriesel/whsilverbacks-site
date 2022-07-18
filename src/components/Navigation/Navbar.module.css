@@ -12,6 +12,8 @@ ul, li {
 .Navbar nav ul li a {
   text-decoration: none;
   color: #fff;
+  font-weight: 900;
+  font-size: 1rem;
 }
 
 .Navbar a:hover {
@@ -50,12 +52,17 @@ ul, li {
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    top: 94px;
+    top: 155px;
     left: 0px;
     width: 100%;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.9);
     border-top: 3px solid #bd5100;
+  }
+  .Navbar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
   }
 }
 /*# sourceMappingURL=Navbar.module.css.map */
