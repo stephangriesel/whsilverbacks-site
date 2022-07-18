@@ -99,9 +99,9 @@ const About = () => {
         </FlexColumn>
       </FlexRow>
       <FlexRow>
-        <p>{about.testimonialOne}</p>
+        {/* <p>{about.testimonialOne}</p>
         <p>{about.testimonialTwo}</p>
-        <p>{about.testimonialThree}</p>
+        <p>{about.testimonialThree}</p> */}
       </FlexRow>
     </FullViewPort>
   );
