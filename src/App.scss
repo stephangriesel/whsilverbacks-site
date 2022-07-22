@@ -113,6 +113,7 @@ html {
     flex-direction: column;
 
     .accordion-content {
+      font-family: 'Roboto', sans-serif;
       margin: 0 1.5rem;
       padding: 1rem;
       border-bottom: 1px solid #929292;
@@ -120,6 +121,9 @@ html {
       border-left: 1px solid #929292;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
+      ul {
+        padding: 1rem 2rem;
+      }
     }
     .accordion-title {
       margin: 0 1.5rem;
