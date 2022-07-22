@@ -70,7 +70,7 @@ const ContentPage = () => {
 
   // show a loading screen case the data hasn't arrived yet
   if (!content) {
-    return "Loading...";
+    return "";
   }
 
   return (

@@ -83,7 +83,7 @@ const TemporaryStructures = () => {
 
   // show a loading screen case the data hasn't arrived yet
   if (!temporaryStructures) {
-    return "Loading...";
+    return "";
   }
 
 

@@ -66,7 +66,7 @@ const Footer = () => {
 
     // show a loading screen case the data hasn't arrived yet
     if (!footer) {
-        return "Loading...";
+        return "";
     }
     return (
         <Layout>

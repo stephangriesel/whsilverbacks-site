@@ -78,7 +78,7 @@ const StretchTents = () => {
 
   // show a loading screen case the data hasn't arrived yet
   if (!stretchTents) {
-    return "Loading...";
+    return "";
   }
 
   return (

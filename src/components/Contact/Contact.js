@@ -57,7 +57,7 @@ const Contact = () => {
 
   // show a loading screen case the data hasn't arrived yet
   if (!contact) {
-    return "Loading...";
+    return "";
   }
 
   return (

@@ -71,7 +71,7 @@ const HomePage = () => {
 
   // show a loading screen case the data hasn't arrived yet
   if (!home) {
-    return "Loading...";
+    return "";
   }
 
   return (

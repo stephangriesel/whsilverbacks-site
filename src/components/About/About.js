@@ -74,7 +74,7 @@ const About = () => {
 
   // show a loading screen case the data hasn't arrived yet
   if (!about) {
-    return "Loading...";
+    return "";
   }
   return (
     <FullViewPort>

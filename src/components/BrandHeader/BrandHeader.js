@@ -54,7 +54,7 @@ const BrandHeader = () => {
 
   // show a loading screen case the data hasn't arrived yet
   if (!header) {
-    return "Loading...";
+    return <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>;
   }
 
   return (

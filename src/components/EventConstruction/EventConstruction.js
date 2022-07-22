@@ -76,7 +76,7 @@ const EventConstruction = () => {
 
   // show a loading screen case the data hasn't arrived yet
   if (!eventConstruction) {
-    return "Loading...";
+    return "";
   }
 
   return (
