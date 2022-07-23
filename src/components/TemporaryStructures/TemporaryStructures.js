@@ -27,7 +27,10 @@ const query = `
       heading
       imagesCollection {
         items {
-          url
+          url(transform:{
+            width:700
+            quality:100
+          })
         }
       }
       preHeading3
@@ -165,9 +168,11 @@ const TemporaryStructures = () => {
             </div>
             {isActiveOne && (
               <div className='accordion-content'>
+                <Fade delay={200}>
                 <p>
                   {temporaryStructures.paragraph3}
                 </p>
+                </Fade>
               </div>
             )}
           </div>
@@ -187,9 +192,11 @@ const TemporaryStructures = () => {
             </div>
             {isActiveTwo && (
               <div className='accordion-content'>
+                <Fade delay={200}>
                 <p>
                   {temporaryStructures.paragraph4}
                 </p>
+                </Fade>
               </div>
             )}
           </div>
@@ -209,9 +216,11 @@ const TemporaryStructures = () => {
             </div>
             {isActiveThree && (
               <div className='accordion-content'>
+                <Fade delay={200}>
                 <p className='accordion-paragraph'>
                   {temporaryStructures.paragraph5}
                 </p>
+                </Fade>
               </div>
             )}
           </div>

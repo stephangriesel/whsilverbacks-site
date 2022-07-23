@@ -26,7 +26,10 @@ const query = `
       heading
       imagesCollection {
         items {
-          url
+          url(transform:{
+            width:700
+            quality:100
+          })
         }
       }
       paragraph1
@@ -178,9 +181,11 @@ const StretchTents = () => {
               </div>
               {isActive && (
                 <div className='accordion-content'>
+                  <Fade delay={200}>
                   <ReactMarkdown>
                     {stretchTents.paragraph8}
                   </ReactMarkdown>
+                  </Fade>
                 </div>
               )}
             </div>
