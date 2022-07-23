@@ -28,10 +28,16 @@ const query = `
       testimonialFour
       testimonialFive
       imageOne {
-        url
+        url(transform:{
+          width:700
+          quality:100
+        })
       }
       imageTwo {
-        url
+        url(transform:{
+          width:700
+          quality:100
+        })
       }
     }
   }
