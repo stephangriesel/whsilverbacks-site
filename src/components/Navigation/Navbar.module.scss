@@ -19,7 +19,7 @@
   display:none;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1280px){
   .Navbar {
     width:100%;
   }
@@ -42,7 +42,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top:155px;
+    top:140px;
     left:0px;
     width: 100%;
     z-index: 1;
