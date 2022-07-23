@@ -51,8 +51,8 @@ module.exports = {
 
   plugins: [
     // https://webpack.js.org/plugins/html-webpack-plugin/  
-    new HtmlWebpackPlugin({
-      template: 'src/index.html'
-    })
+    // new HtmlWebpackPlugin({
+    //   template: path.join(__dirname, "src", "index.html"),
+    // }),
   ],
 }
