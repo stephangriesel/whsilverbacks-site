@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRef, useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { FaUserFriends } from 'react-icons/fa'
 import { FaRegMap } from 'react-icons/fa'
 import { FaEnvelope } from 'react-icons/fa'

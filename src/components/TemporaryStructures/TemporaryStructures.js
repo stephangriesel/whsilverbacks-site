@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import { Fade } from "react-awesome-reveal";
 
