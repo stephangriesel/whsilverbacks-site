@@ -70,7 +70,7 @@ const Contact = () => {
             {contact.slotParagraph}
           </ReactMarkdown>
         </FlexColumn>
-        <Form action="https://form.taxi/s/2dbsqdfa" method="POST">
+        <Form action="https://form.taxi/s/p9cor006" method="POST">
           <FlexColumn>
             <label for="name">Name:</label>
             <input type="text" name="Name" />
