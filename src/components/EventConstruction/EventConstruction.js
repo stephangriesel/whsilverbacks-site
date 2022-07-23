@@ -16,6 +16,7 @@ import { EffectFade, Navigation, Pagination } from "swiper";
 
 // Swiper styles 
 import './styles.css';
+import Inline from '../../UI/Inline/Inline';
 
 const query = `
 {
@@ -25,7 +26,10 @@ const query = `
       heading
       imagesCollection {
         items {
-          url
+          url(transform:{
+            width:700
+            quality:100
+          })
         }
       }
       preHeading1
@@ -85,46 +89,46 @@ const EventConstruction = () => {
         <FlexColumn>
           <Fade delay={200}>
             <Swiper
-                spaceBetween={30}
-                navigation={true}
-                pagination={{
-                  clickable: true,
-                }}
-                modules={[EffectFade, Navigation, Pagination]}
-              >
-                <SwiperSlide>
-                  <img
-                    src={eventConstruction.imagesCollection.items[0].url}
-                    alt='installation'
-                    placeholder='tracedSVG'
-                    width={300}
-                    className='border-radius-50' />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={eventConstruction.imagesCollection.items[3].url}
-                    alt='installation'
-                    placeholder='tracedSVG'
-                    width={300}
-                    className='border-radius-50' />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={eventConstruction.imagesCollection.items[4].url}
-                    alt='installation'
-                    placeholder='tracedSVG'
-                    width={300}
-                    className='border-radius-50' />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={eventConstruction.imagesCollection.items[5].url}
-                    alt='installation'
-                    placeholder='tracedSVG'
-                    width={300}
-                    className='border-radius-50' />
-                </SwiperSlide>
-              </Swiper>
+              spaceBetween={30}
+              navigation={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[EffectFade, Navigation, Pagination]}
+            >
+              <SwiperSlide>
+                <img
+                  src={eventConstruction.imagesCollection.items[0].url}
+                  alt='installation'
+                  placeholder='tracedSVG'
+                  width={300}
+                  className='border-radius-50' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src={eventConstruction.imagesCollection.items[3].url}
+                  alt='installation'
+                  placeholder='tracedSVG'
+                  width={300}
+                  className='border-radius-50' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src={eventConstruction.imagesCollection.items[4].url}
+                  alt='installation'
+                  placeholder='tracedSVG'
+                  width={300}
+                  className='border-radius-50' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src={eventConstruction.imagesCollection.items[5].url}
+                  alt='installation'
+                  placeholder='tracedSVG'
+                  width={300}
+                  className='border-radius-50' />
+              </SwiperSlide>
+            </Swiper>
           </Fade>
         </FlexColumn>
         <FlexColumn>
@@ -160,6 +164,13 @@ const EventConstruction = () => {
             <ReactMarkdown>
               {eventConstruction.paragraph3}
             </ReactMarkdown>
+          </div>
+          <div className='certContainer'>
+            <Inline>
+              <img className='certImgOne' src={eventConstruction.imagesCollection.items[6].url} alt="certification" />
+              <img className='certimgTwo' src={eventConstruction.imagesCollection.items[7].url} alt="certification" />
+              <img className='certimgThree' src={eventConstruction.imagesCollection.items[8].url} alt="certification" />
+            </Inline>
           </div>
           <div>
             <ReactMarkdown>
