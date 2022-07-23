@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'none',
   // https://webpack.js.org/configuration/entry-context/#entry
   // entry: path.join(__dirname, "src", "index.js"),
   // what is __dirname https://www.digitalocean.com/community/tutorials/nodejs-how-to-use__dirname 
