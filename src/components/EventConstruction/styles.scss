@@ -2,3 +2,13 @@
   --swiper-navigation-color:#ffffff;
   --swiper-pagination-color:#ffffff;
 }
+
+.certContainer {
+  display:flex;
+  align-items: center;
+  // justify-content: center;
+  img {
+    width: 5rem;
+    margin:0.5rem;
+  }
+}
