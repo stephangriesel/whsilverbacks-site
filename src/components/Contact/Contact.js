@@ -70,7 +70,7 @@ const Contact = () => {
             {contact.slotParagraph}
           </ReactMarkdown>
         </FlexColumn>
-        <Form action="https://form.taxi/s/p9cor006" method="POST">
+        <form action="https://form.taxi/s/p9cor006" method="POST">
           <FlexColumn>
             <label for="name">Name:</label>
             <input type="text" name="Name" />
@@ -87,17 +87,17 @@ const Contact = () => {
             <label for="location">Location:</label>
             <input type="text" name="Location" />
 
-            <label for="NumberPeople">Number of people:</label>
+            <label for="numberPeople">Number of people:</label>
             <input type="number" name="NumberPeople" />
 
-            <label for="Reference">How did you find us?</label>
+            <label for="reference">How did you find us?</label>
             <input type="text" name="Reference" />
 
             <JustifyCenter>
               <button type="submit">Send</button>
             </JustifyCenter>
           </FlexColumn>
-        </Form>
+        </form>
       </FlexRow>
     </FullViewPort>
   )
