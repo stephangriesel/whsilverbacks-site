@@ -3,7 +3,6 @@ import { useState, useEffect } from "react"
 import ReactMarkdown from 'react-markdown'
 
 import FlexColumn from '../../UI/Layout/FlexColumn/FlexColumn'
-import Form from '../../UI/Form/Form'
 import FlexRow from '../../UI/Layout/FlexRow/FlexRow'
 
 import FullViewPort from '../../UI/FullViewPort/FullViewPort'
