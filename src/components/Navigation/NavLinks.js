@@ -3,11 +3,11 @@ import { Fade } from "react-awesome-reveal";
 const NavLinks = (props) => {
   return (
     <ul>
-      <Fade delay={50}>
+      {/* <Fade delay={50}>
         <li onClick={() => props.isMobile && props.closeMobileMenu()}>
           <a href="/">HOME</a>
         </li>
-      </Fade>
+      </Fade> */}
       <Fade delay={70}>
         <li onClick={() => props.isMobile && props.closeMobileMenu()}>
           <a href="/about">ABOUT</a>

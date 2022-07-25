@@ -19,7 +19,7 @@
   display: none;
 }
 
-@media (max-width: 1114px) {
+@media (max-width: 1040px) {
   .Navbar {
     width: 100%;
   }
@@ -47,17 +47,30 @@
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    top: 140px;
+    top: 210px;
     left: 0px;
     width: 100%;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.9);
     border-top: 3px solid #bd5100;
+    padding: 3rem;
   }
   .Navbar nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .Navbar nav ul {
+    top: 190px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Navbar nav ul {
+    top: 140px;
   }
 }
 /*# sourceMappingURL=Navbar.module.css.map */

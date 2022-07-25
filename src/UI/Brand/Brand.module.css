@@ -11,7 +11,7 @@
   max-width: 13em !important;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
   .brand img {
     max-width: 40em !important;
   }
