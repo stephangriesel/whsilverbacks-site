@@ -2,4 +2,17 @@
   --swiper-navigation-color:#ffffff;
   --swiper-pagination-color:#ffffff;
 }
+
+.inner {
+  height: 45rem;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.inner::-webkit-scrollbar {
+  display: none;
+}
 /*# sourceMappingURL=styles.css.map */

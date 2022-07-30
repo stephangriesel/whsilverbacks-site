@@ -133,6 +133,7 @@ const StretchTents = () => {
           </Fade>
         </FlexColumn>
         <FlexColumn>
+        <div className="inner">
           <h1>
             {stretchTents.title}
           </h1>
@@ -195,6 +196,7 @@ const StretchTents = () => {
               {stretchTents.paragraph9}
             </ReactMarkdown>
           </div>
+        </div>
         </FlexColumn>
       </FlexRow>
     </div>
