@@ -4,12 +4,17 @@
 }
 
 .inner {
-  height: 40rem;
+  border-radius: 10px;
+  height: 35rem;
+  margin: 20px;
+  padding-bottom: 40px;
   overflow-y: scroll;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+  -webkit-box-shadow: inset 2px -50px 17px -30px rgba(255, 255, 255, 0.22);
+  box-shadow: inset 2px -50px 17px -30px rgba(255, 255, 255, 0.22);
 }
 
 .inner::-webkit-scrollbar {
