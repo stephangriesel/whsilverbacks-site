@@ -1,13 +1,14 @@
 import { Fade } from "react-awesome-reveal";
+import { FaHome } from 'react-icons/fa';
 
 const NavLinks = (props) => {
   return (
     <ul>
-      {/* <Fade delay={50}>
+      <Fade delay={50}>
         <li onClick={() => props.isMobile && props.closeMobileMenu()}>
-          <a href="/">HOME</a>
+          <a href="/"><FaHome /></a>
         </li>
-      </Fade> */}
+      </Fade>
       <Fade delay={70}>
         <li onClick={() => props.isMobile && props.closeMobileMenu()}>
           <a href="/about">ABOUT</a>
