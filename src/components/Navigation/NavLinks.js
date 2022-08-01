@@ -3,10 +3,13 @@ import { FaHome } from 'react-icons/fa';
 
 const NavLinks = (props) => {
   return (
+
     <ul>
       <Fade delay={50}>
         <li onClick={() => props.isMobile && props.closeMobileMenu()}>
-          <a href="/"><FaHome /></a>
+          <div className="home-icon">
+            <a href="/"><FaHome /></a>
+          </div>
         </li>
       </Fade>
       <Fade delay={70}>
