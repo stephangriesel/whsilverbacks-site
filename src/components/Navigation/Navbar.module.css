@@ -1,7 +1,6 @@
 .Navbar nav ul li {
   display: inline-block;
-  margin: 1.0vw;
-  padding: 10px 0;
+  padding: 10px 15px;
 }
 
 .Navbar nav ul li a {
@@ -19,7 +18,7 @@
   display: none;
 }
 
-@media (max-width: 1114px) {
+@media (max-width: 1160px) {
   .Navbar {
     width: 100%;
   }
