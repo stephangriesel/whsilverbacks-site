@@ -17,6 +17,7 @@ import { EffectFade, Navigation, Pagination } from "swiper";
 // Swiper styles 
 import './styles.css';
 import Inline from '../../UI/Inline/Inline';
+import FullViewPort from '../../UI/FullViewPort/FullViewPort';
 
 const query = `
 {
@@ -84,7 +85,7 @@ const EventConstruction = () => {
   }
 
   return (
-    <div>
+    <FullViewPort>
       <FlexRow>
         <FlexColumn>
           <Fade delay={200}>
@@ -179,7 +180,7 @@ const EventConstruction = () => {
           </div>
         </FlexColumn>
       </FlexRow>
-    </div>
+    </FullViewPort>
   )
 }
 

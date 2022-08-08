@@ -17,6 +17,7 @@ import { EffectFade, Navigation, Pagination } from "swiper";
 
 // Swiper styles 
 import './styles.css';
+import FullViewPort from '../../UI/FullViewPort/FullViewPort';
 
 const query = `
 {
@@ -85,7 +86,7 @@ const StretchTents = () => {
   }
 
   return (
-    <div>
+    <FullViewPort>
       <FlexRow>
         <FlexColumn>
         <Fade delay={200}>
@@ -199,7 +200,7 @@ const StretchTents = () => {
         </div>
         </FlexColumn>
       </FlexRow>
-    </div>
+    </FullViewPort>
   )
 
 }
