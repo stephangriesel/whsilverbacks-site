@@ -133,6 +133,7 @@ const EventConstruction = () => {
           </Fade>
         </FlexColumn>
         <FlexColumn>
+          <div className="inner">
           <h1>
             {eventConstruction.title}
           </h1>
@@ -177,6 +178,7 @@ const EventConstruction = () => {
             <ReactMarkdown>
               {eventConstruction.paragraph4}
             </ReactMarkdown>
+          </div>
           </div>
         </FlexColumn>
       </FlexRow>

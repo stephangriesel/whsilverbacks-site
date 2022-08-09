@@ -2,19 +2,3 @@
   --swiper-navigation-color:#ffffff;
   --swiper-pagination-color:#ffffff;
 }
-
-.inner {
-  // border-radius: 10px;
-  height: 35rem;
-  margin:20px;
-  padding-bottom: 40px;
-  overflow-y: scroll;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-  -webkit-box-shadow: inset 0px -48px 17px -30px #6d7076; 
-  box-shadow: inset 0px -48px 17px -30px #6d7076;
-}
-
-.inner::-webkit-scrollbar {
-  display: none;
-}

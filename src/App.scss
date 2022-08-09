@@ -148,3 +148,55 @@ html {
     }
   }
 }
+
+/* Scroll content blocks */
+
+.inner {
+  // border-radius: 10px;
+  height: 45rem;
+  margin:20px;
+  padding-bottom: 40px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  -webkit-box-shadow: inset 0px -48px 17px -30px #6d7076; 
+  box-shadow: inset 0px -48px 17px -30px #6d7076;
+}
+
+.inner::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 1450px) {
+  .inner {
+    height: 30rem;
+    margin:20px;
+    padding-bottom: 40px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    -webkit-box-shadow: inset 0px -48px 17px -30px #6d7076; 
+    box-shadow: inset 0px -48px 17px -30px #6d7076;
+  }
+  
+  .inner::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .inner {
+    height: auto;
+    margin:20px;
+    padding-bottom: 40px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    -webkit-box-shadow: inset 0px 0px 0px 0px #6d7076; 
+    box-shadow: inset 0px 0px 0px 0px #6d7076;
+  }
+  
+  .inner::-webkit-scrollbar {
+    display: none;
+  }
+}

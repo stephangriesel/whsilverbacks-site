@@ -140,6 +140,7 @@ const TemporaryStructures = () => {
           </Fade>
         </FlexColumn>
         <FlexColumn>
+          <div className="inner">
           <h1>
             {temporaryStructures.title}
           </h1>
@@ -240,6 +241,7 @@ const TemporaryStructures = () => {
             <ReactMarkdown>
               {temporaryStructures.paragraph8}
             </ReactMarkdown>
+          </div>
           </div>
         </FlexColumn>
       </FlexRow>
