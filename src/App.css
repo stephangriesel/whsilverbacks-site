@@ -220,14 +220,14 @@ html .accordion .accordion-item.accordion-content {
 .inner {
   height: 45rem;
   margin: 20px;
-  padding-bottom: 40px;
   overflow-y: scroll;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
-  -webkit-box-shadow: inset 0px -48px 17px -30px #6d7076;
-  box-shadow: inset 0px -48px 17px -30px #6d7076;
+  background: radial-gradient(circle farthest-side at bottom center, #ffffff -5%, rgba(66, 66, 66, 0) 55%);
+  background-position-y: 20rem;
+  background-repeat: no-repeat;
 }
 
 .inner::-webkit-scrollbar {
@@ -244,8 +244,9 @@ html .accordion .accordion-item.accordion-content {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
-    -webkit-box-shadow: inset 0px -48px 17px -30px #6d7076;
-    box-shadow: inset 0px -48px 17px -30px #6d7076;
+    background: radial-gradient(circle farthest-side at bottom center, #bab7b7 -10%, rgba(66, 66, 66, 0) 50%);
+    background-position-y: 13rem;
+    background-repeat: no-repeat;
   }
   .inner::-webkit-scrollbar {
     display: none;
@@ -262,8 +263,9 @@ html .accordion .accordion-item.accordion-content {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
-    -webkit-box-shadow: inset 0px 0px 0px 0px #6d7076;
-    box-shadow: inset 0px 0px 0px 0px #6d7076;
+    background: radial-gradient(circle farthest-side at bottom center, #bab7b7 0%, rgba(66, 66, 66, 0) 0%);
+    background-position-y: 20rem;
+    background-repeat: no-repeat;
   }
   .inner::-webkit-scrollbar {
     display: none;
