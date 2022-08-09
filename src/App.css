@@ -225,7 +225,7 @@ html .accordion .accordion-item.accordion-content {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
-  background: radial-gradient(circle farthest-side at bottom center, #ffffff -5%, rgba(66, 66, 66, 0) 55%);
+  background: radial-gradient(circle farthest-side at bottom center, #ffffff -5%, rgba(66, 66, 66, 0) 0%);
   background-position-y: 20rem;
   background-repeat: no-repeat;
 }

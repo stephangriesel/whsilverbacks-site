@@ -159,10 +159,10 @@ html {
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  background:-webkit-radial-gradient(circle farthest-side at bottom center, #ffffff -5%, rgba(66, 66, 66, 0) 55%);
-  background:-o-radial-gradient(circle farthest-side at bottom center, #ffffff -5%, rgba(66, 66, 66, 0) 55%);
-  background:-moz-radial-gradient(circle farthest-side at bottom center, #ffffff -5%, rgba(66, 66, 66, 0) 55%);
-  background:radial-gradient(circle farthest-side at bottom center, #ffffff -5%, rgba(66, 66, 66, 0) 55%);
+  background:-webkit-radial-gradient(circle farthest-side at bottom center, #ffffff -5%, rgba(66, 66, 66, 0) 0%);
+  background:-o-radial-gradient(circle farthest-side at bottom center, #ffffff -5%, rgba(66, 66, 66, 0) 0%);
+  background:-moz-radial-gradient(circle farthest-side at bottom center, #ffffff -5%, rgba(66, 66, 66, 0) 0%);
+  background:radial-gradient(circle farthest-side at bottom center, #ffffff -5%, rgba(66, 66, 66, 0) 0%);
   background-position-y: 20rem;
   background-repeat: no-repeat;
 }
