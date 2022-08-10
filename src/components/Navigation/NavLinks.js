@@ -7,9 +7,7 @@ const NavLinks = (props) => {
     <ul>
       <Fade delay={50}>
         <li onClick={() => props.isMobile && props.closeMobileMenu()}>
-          <div className="home-icon">
-            <a href="/"><FaHome /></a>
-          </div>
+            <a href="/"><FaHome className="homeIcon" /></a>
         </li>
       </Fade>
       <Fade delay={70}>
