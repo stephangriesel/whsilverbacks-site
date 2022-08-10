@@ -138,9 +138,9 @@ const HomePage = () => {
           <p>{home.paragraphOne}</p>
           <p>{home.paragraphTwo}</p>
           <p>{home.paragraphThree}</p>
-          <p>{home.paragraphFour}</p>
+          {/* <p>{home.paragraphFour}</p>
           <p>{home.paragraphFive}</p>
-          <p>{home.paragraphSix}</p>
+          <p>{home.paragraphSix}</p> */}
         </FlexColumn>
       </FlexRow>
     </FullViewPort>
