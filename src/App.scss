@@ -171,6 +171,19 @@ html {
   display: none;
 }
 
+.homeIcon {
+  font-size:1.2rem;
+  position:absolute;
+  top:3.875rem;
+  right: 49.5rem;
+  font-size:1.5rem;
+}
+
+.homeIcon:hover {
+  color:#bd5100;
+  transition: ease-in-out 0.2s;
+}
+
 @media only screen and (max-width: 1450px) {
   .inner {
     height: 30rem;
@@ -189,6 +202,12 @@ html {
   
   .inner::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 1148px) {
+  .homeIcon {
+    position:unset;
   }
 }
 
