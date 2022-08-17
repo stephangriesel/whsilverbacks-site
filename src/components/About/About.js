@@ -4,6 +4,8 @@ import FullViewPort from "../../UI/FullViewPort/FullViewPort";
 import FlexColumn from "../../UI/Layout/FlexColumn/FlexColumn";
 import FlexRow from "../../UI/Layout/FlexRow/FlexRow";
 
+import ReactMarkdown from 'react-markdown'
+
 import { Fade } from "react-awesome-reveal";
 
 // TO DO: Query Update: About
@@ -84,6 +86,7 @@ const About = () => {
   }
   return (
     <FullViewPort>
+      
       <FlexRow>
         <FlexColumn>
           <h1>{about.title}</h1>
@@ -101,7 +104,7 @@ const About = () => {
           <Fade delay={200}>
             <img src={about.imageTwo.url} alt="crane" />
           </Fade>
-          <p>{about.paragraphSix}</p>
+          <ReactMarkdown>{about.paragraphSix}</ReactMarkdown>
         </FlexColumn>
       </FlexRow>
       <FlexRow>
