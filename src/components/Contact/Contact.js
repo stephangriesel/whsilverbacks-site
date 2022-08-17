@@ -69,8 +69,16 @@ const Contact = () => {
             {contact.slotParagraph}
           </ReactMarkdown>
         </FlexColumn>
-        <form action="https://formbold.com/s/oJx49" method="POST">
+        <form action="https://submit-form.com/jtNrv29Y" method="POST" data-botpoison-public-key={process.env.REACT_APP_BOTPOISON_PK}>
           <FlexColumn>
+            <input
+              type="hidden"
+              name="_redirect"
+              value="https://www.whsilverbacks.co.uk/success"
+            />
+
+            <input type="hidden" name="_append" value="false" />
+
             <label for="name">Name:</label>
             <input type="text" name="Name" />
 
