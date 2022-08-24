@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: https://whpreview.consulitate.com
