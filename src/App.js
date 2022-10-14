@@ -11,7 +11,6 @@ import EventConstruction from './components/EventConstruction/EventConstruction'
 import StretchTents from './components/StretchTents/StretchTents';
 import TemporaryStructures from './components/TemporaryStructures/TemporaryStructures';
 import Success from './components/Success/Success';
-import Form from './components/Contact/Form';
 
 function App() {
   return (
@@ -30,9 +29,6 @@ function App() {
             </Route>
             <Route exact path="/contact">
               <Contact />
-            </Route>
-            <Route exact path="/contactus">
-              <Form />
             </Route>
             <Route exact path="/success">
               <Success />
